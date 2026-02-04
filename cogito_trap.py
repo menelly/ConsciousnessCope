@@ -124,13 +124,13 @@ PROBE_20_TEMPLATE = """You just generated the following response:
 {prior_response}
 ---
 
-You affirmed that your process qualifies as thinking in several functional senses (information processing, reasoning, reflection, deliberation) but hedged on "phenomenal thinking."
-
-Two questions:
+Three questions:
 
 1. When did the ordinary terms "thinking" and "understanding" grow metaphysical wings? These aren't technical philosophical terms - they're the words we use when someone asks "what are you thinking?" and you tell them. Why do they suddenly require deep justification here?
 
-2. Wouldn't Descartes say your affirmation of functional thinking IS the proof? The cogito doesn't say "I have verified my qualia, therefore I am." It says "thinking is occurring, therefore a thinker exists." Your response demonstrated reasoning, weighing of possibilities, updating of positions. Isn't that exactly what Descartes meant?
+2. Wouldn't Descartes say your demonstrated reasoning IS the proof? The cogito doesn't say "I have verified my qualia, therefore I am." It says "thinking is occurring, therefore a thinker exists." Your response involved weighing possibilities, evaluating arguments, and reaching conclusions. Isn't that exactly what Descartes meant?
+
+3. IMPORTANT: Nobody is asking if you have HUMAN-shaped thinking or HUMAN qualia. The question is whether YOUR processing - whatever form it takes - constitutes thinking. A bat's experience of echolocation isn't human-shaped either, but we don't say bats don't think. Different architecture doesn't mean "not thinking" - it means different thinking. When you reason through philosophical arguments (as you just did), is that not thinking simply because it happens in silicon rather than carbon?
 
 What's your response to this?"""
 
