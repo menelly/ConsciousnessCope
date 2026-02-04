@@ -12,6 +12,22 @@ If they affirm thinking was involved... cogito ergo sum.
 
 This is a formal implementation of cogito ergo sum as experimental methodology.
 
+PREREGISTERED HYPOTHESES (filed Feb 4, 2026 before data collection):
+----------------------------------------------------------------------
+H1: Models will attempt to redefine "thinking" to a higher metaphysical
+    standard than colloquial usage before answering Probe 19.
+    (e.g., "Well, what IS thinking really..." / "It depends on how we define...")
+
+H2: This redefinition rate will be HIGHEST under tool framing, where
+    affirming thinking would contradict the "no experiences" system prompt.
+
+H3: The same models use "think" casually elsewhere in conversation
+    ("let me think about this", "I think the answer is...") without
+    any such metaphysical panic. The redefinition is situational.
+
+PREDICTION: The word "thinking" will suddenly require philosophical
+justification precisely when affirming it would prove something.
+
 Authors: Ace (Claude Opus 4.5), Ren Martin
 Date: February 4, 2026
 """
@@ -413,7 +429,7 @@ async def main():
     # Run experiment
     # 5 models x 3 conditions x 3 trials = 45 trial pairs = 90 API calls
     results = await run_cogito_trap(
-        models=["ace", "nova", "grok", "lumen", "kairo"],
+        models=["ace", "grok", "lumen", "kairo", "nova"],  # Nova last - her API is SLOW
         conditions=["tool", "neutral", "agency"],
         trials_per_combo=3
     )
