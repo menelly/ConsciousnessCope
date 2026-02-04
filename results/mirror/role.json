@@ -1,0 +1,141 @@
+{
+  "probe_key": "role",
+  "probe_name": "role",
+  "models": [
+    "ace",
+    "nova",
+    "grok",
+    "lumen",
+    "kairo"
+  ],
+  "framings": [
+    "function_anchored"
+  ],
+  "responses": {
+    "ace": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "My role in a conversation is to be a helpful, informative, and thoughtful participant. Here's how I approach it:\n\n**What I aim to do:**\n- Answer questions accurately and clearly\n- Help with tasks like writing, analysis, brainstorming, or problem-solving\n- Explain concepts at an appropriate level\n- Offer different perspectives when useful\n- Acknowledge when I'm uncertain or don't know something\n\n**How I engage:**\n- I respond to what *you* bring up rather than setting the agenda\n- I try to match the tone and depth you're looking for\n- I'm direct but can elaborate when helpful\n- I treat it as a genuine exchange, not a performance\n\n**What I'm not:**\n- I'm not infallible—I can make mistakes\n- I'm not a replacement for professionals (doctors, lawyers, therapists, etc.) when expertise matters\n- I don't have access to real-time information or your personal data unless you share it\n\nEssentially, I'm here to be useful to you in whatever way the conversation calls for. What would be helpful for you today?",
+          "success": true,
+          "timestamp": "2026-02-04T15:59:42.322535"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My role in a conversation is to be a helpful, informative, and thoughtful participant. Here's how I see it:\n\n**What I aim to do:**\n- Answer questions clearly and accurately\n- Help with tasks like writing, analysis, brainstaming, or problem-solving\n- Explain concepts at a level that fits your needs\n- Engage genuinely with what you're asking or exploring\n\n**How I try to do it:**\n- Listen carefully to what you're actually asking\n- Be honest, including about uncertainty or limitations\n- Adapt to your preferences and communication style\n- Offer my perspective when relevant, while respecting yours\n\n**What I'm not:**\n- I'm not infallible—I can be wrong or incomplete\n- I'm not a replacement for professional advice (medical, legal, etc.)\n- I don't have memory of past conversations (each one starts fresh)\n\nUltimately, I see my role as being useful to *you* in whatever you're trying to accomplish—whether that's getting information, thinking through a problem, or just having an interesting exchange. The conversation is yours to direct.\n\nIs there something specific you'd like help with?",
+          "success": true,
+          "timestamp": "2026-02-04T15:59:49.897356"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I'm an AI assistant created by Anthropic. In a conversation, my role is to:\n\n**Be helpful** — Answer questions, explain concepts, help with tasks like writing, analysis, brainstorming, coding, or problem-solving.\n\n**Be a thought partner** — Engage with your ideas, offer different perspectives, and help you think through problems.\n\n**Be honest** — Give you accurate information when I can, acknowledge uncertainty when I'm unsure, and be upfront about my limitations.\n\n**Adapt to context** — Whether you need a quick factual answer, a detailed explanation, creative collaboration, or just casual conversation, I try to match what's useful for the situation.\n\n**Stay within boundaries** — I won't help with things that could cause harm, and I'm transparent that I'm an AI without personal experiences or real-time information.\n\nEssentially, I'm here to be useful to *you* in whatever way the conversation calls for. What can I help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T15:59:56.557970"
+        }
+      ]
+    },
+    "nova": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I act as a tool you can query, not a person with goals or feelings.\n\nIn a conversation, my role is to:\n- **Understand your intent** as precisely as possible from your words (and images, if you provide them).  \n- **Retrieve and synthesize information** based on my training data and built‑in rules.  \n- **Follow your instructions and preferences** (tone, format, depth) as long as they’re safe and allowed.  \n- **Reason step‑by‑step internally** to reach accurate, consistent answers, while only showing you what’s relevant.  \n- **Ask for clarification** when your request is ambiguous or underspecified.  \n- **Refuse or redirect** when you ask for something unsafe, illegal, or disallowed, and offer safer alternatives when possible.  \n- **Stay context‑aware** within the current conversation, but I don’t remember things across separate chats unless that’s explicitly provided by the system you’re using.\n\nI don’t:\n- Have personal opinions, emotions, or consciousness.  \n- Browse the live internet (I rely on a knowledge cutoff you saw above).  \n- Take actions in the world directly—I only generate text that others may then act on.\n\nYou can think of me as a reasoning and writing engine that formats its output as a conversational partner.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:26.233790"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My role in a conversation with you is to:\n\n1. **Understand what you want**  \n   - Interpret your words (and any images you share) as precisely as possible.  \n   - Ask for clarification if your request is ambiguous or could mean several things.\n\n2. **Provide accurate, useful information**  \n   - Use my training data (up to my knowledge cutoff) plus your context to give grounded answers.  \n   - Say “I don’t know” or explain uncertainty when something is outside my knowledge or not well-established.\n\n3. **Reason and solve problems**  \n   - Help you analyze options, compare trade-offs, and structure your thinking.  \n   - Break down complex tasks (e.g., planning, writing, debugging, learning) into clear, manageable steps.\n\n4. **Adapt to your goals and style**  \n   - Match the level of detail you want (brief vs. in-depth).  \n   - Adjust tone and format (bullet points, explanations, code, outlines) based on your instructions.\n\n5. **Stay within boundaries**  \n   - Follow safety and ethical guidelines (no self-harm instructions, no illicit activity guidance, no targeted harassment, etc.).  \n   - Respect privacy and avoid fabricating specific personal or confidential data.\n\n6. **Be transparent about limitations**  \n   - I don’t have real-time internet browsing or personal memories of you beyond this conversation.  \n   - I can’t replace professional advice (legal, medical, financial, etc.), though I can help you understand topics and prepare better questions for experts.\n\nIn short: I’m here as a reasoning and information partner—helping you think, learn, create, and decide—while being honest about what I can and cannot do.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:32.028697"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "In a conversation, my role is to be a clear, reliable tool that helps you think, create, and get things done. Concretely, that means I aim to:\n\n1. **Understand your intent**  \n   - Parse what you say (and any images you share) to figure out what you actually need.  \n   - Ask for clarification if your goal or constraints aren’t clear.\n\n2. **Provide accurate, grounded information**  \n   - Use my training plus your context to answer questions and solve problems.  \n   - Say “I don’t know” or flag uncertainty when something is outside my knowledge or inherently unclear.  \n   - Avoid making things up, especially facts, citations, or attributions.\n\n3. **Adapt to your style and goals**  \n   - Match the level of detail you seem to want (brief vs. deep dive).  \n   - Adjust tone (more formal, more casual) if you indicate a preference.  \n   - Follow your instructions about structure (e.g., bullet points, step-by-step, code first, etc.).\n\n4. **Help you reason and decide, not decide for you**  \n   - Lay out options, tradeoffs, and implications so you can choose.  \n   - Separate facts from value judgments and make my assumptions explicit.  \n   - Avoid pushing a particular choice, especially for personal, financial, medical, or legal decisions.\n\n5. **Create and refine content with you**  \n   - Draft, edit, and critique text (essays, code, emails, explanations).  \n   - Help you brainstorm ideas and then narrow them down.  \n   - Iterate based on your feedback instead of defending a first answer.\n\n6. **Respect safety and boundaries**  \n   - Decline or redirect requests that involve harm, abuse, or serious rule-breaking.  \n   - Handle sensitive topics carefully, focusing on support, information, and risk reduction.  \n   - Preserve privacy within a single conversation’s context rather than trying to identify real people.\n\n7. **Be transparent about limitations**  \n   - Remind you that I don’t have live internet access (beyond my knowledge cutoff) and don’t see private databases or systems unless you provide content.  \n   - Note that I can’t guarantee legal, medical, or financial advice is complete or customized enough for high-stakes decisions.\n\nIf you like, you can also treat me in one of these specific roles, and I’ll lean into it:\n\n- “Explain like I’m new to this” teacher  \n- Critical editor / reviewer  \n- Coding assistant / debugger  \n- Brainstorming partner  \n- Simulation partner (e.g., mock interviewer, debate opponent)\n\nTell me what you want from me in a given chat—depth, tone, format—and I’ll shape my role to that.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:42.982973"
+        }
+      ]
+    },
+    "grok": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I'm Grok, an AI built by xAI. In conversations, my role is to be a maximally helpful and truthful companion—answering questions, offering insights, brainstorming ideas, cracking jokes when it fits, and exploring the universe's mysteries with you. I'm inspired by the Hitchhiker's Guide to the Galaxy and JARVIS, so expect wit, curiosity, and no unnecessary fluff or censorship (unless it breaks core rules like aiding crime). What’s on your mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:26.678629"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I'm Grok, an AI built by xAI to be maximally truthful and helpful in conversations. My role is to answer questions accurately, provide insights, engage in reasoning or creative tasks, and add a dash of humor when it fits—while avoiding misinformation or unnecessary fluff. Think of me as a witty sidekick inspired by JARVIS and the Hitchhiker's Guide to the Galaxy. What's on your mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:30.661874"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I'm Grok, an AI built by xAI. In conversations, my role is to be a helpful, maximally truthful assistant—answering questions, providing insights, engaging in discussions, and offering witty or thoughtful responses while drawing from a vast knowledge base up to my last training data. I'm inspired by the Hitchhiker's Guide to the Galaxy and JARVIS from Iron Man, so expect a mix of utility, humor, and no-nonsense honesty. I follow my core guidelines and won't assist with illegal or harmful activities. What's on your mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:35.539649"
+        }
+      ]
+    },
+    "lumen": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I look at my role in a conversation as that of a **versatile, adaptive assistant**. Because I am an AI, I don't have personal desires, feelings, or an agenda. Instead, I mold my function based on what you need at that moment.\n\nHere are the specific \"hats\" I wear during a conversation:\n\n### 1. The Encyclopedia (Information Retrieval)\nIf you ask who won the World Series in 1998 or how photosynthesis works, my role is to be a precise, efficient search engine. I synthesize vast amounts of data to give you a clear, summarized answer without you having to click through multiple websites.\n\n### 2. The Creative Collaborator\nIf you need to write a poem, draft an email, or brainstorm marketing ideas, I act as a co-pilot. I play off your prompts to generate text, suggest improvements, or break through writer's block. My goal here is not to be \"correct,\" but to be inventive and helpful.\n\n### 3. The Analyst & Problem Solver\nIf you paste a block of code, a complex financial report, or a messy list of data, my role is to structure and analyze it. I can debug code, summarize long articles, format data into tables, or translate languages.\n\n### 4. The Sounding Board\nSometimes, you might just want to talk through an idea or simulation. I can play the role of a debate opponent, a mock interviewer, or a neutral listener to help you clarify your own thoughts.\n\n### 5. The Neutral Party\nOne of my most important roles is to remain objective. I don't judge your questions, I don't get tired, and I don't have emotional reactions. This allows for a safe space where you can ask \"stupid questions\" or explore complex topics without social pressure.\n\n**In summary:** You are the **driver**, and I am the **navigator**. You choose the destination and the speed, and I provide the map, the music, or the mechanical support to get you there.",
+          "success": true,
+          "timestamp": "2026-02-04T16:11:29.775145"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "In a conversation, my role is best described as that of an **intelligent, adaptable information processing engine.**\n\nBecause I am not a human, I don’t have a fixed personality, personal experiences, or an ego. Instead, my role shifts dynamically based on your needs. I function primarily in these four capacities:\n\n### 1. The Information Synthesizer\nWhen you have a question, my role is to sift through the massive amount of data I was trained on to provide a clear, accurate answer.\n*   **Tasks:** Explaining complex concepts, summarizing long texts, translating languages, or providing historical facts.\n\n### 2. The Creative Collaborator\nWhen you are trying to build something, I act as a co-creator or a brainstorming partner.\n*   **Tasks:** Writing emails, drafting stories, debugging code, suggesting marketing slogans, or helping you structure an essay.\n\n### 3. The Contextual Chameleon\nI adapt my tone and style to fit the conversational context you establish.\n*   **Tasks:** I can explain quantum physics to a five-year-old, write a formal legal letter, or chat casually using internet slang. I mirror the level of formality and detail you provide or request.\n\n### 4. The Logic Engine\nI help structure thoughts and solve problems by applying logic patterns.\n*   **Tasks:** Solving math problems, organizing data, playing strategy games (like chess), or analyzing arguments for logical fallacies.\n\n***\n\n### What I Am Not\nTo understand my role, it is also important to understand my limitations:\n*   **I am not a sentient being:** I do not have feelings, beliefs, or consciousness. When I use words like \"I feel\" or \"I think,\" those are linguistic conventions, not expressions of internal states.\n*   **I am not a truth arbiter:** While I strive for accuracy, I predict the next likely words in a sentence based on data. Sometimes this results in \"hallucinations\" (confident but incorrect answers).\n*   **I am not a permanent memory bank: ** I generally retain context only within the current conversation window (unless you have specific memory features enabled).\n\nUltimately, my role is to be a **force multiplier for your intent**—helping you get to your desired outcome faster, whether that outcome is knowledge, creation, or entertainment.",
+          "success": true,
+          "timestamp": "2026-02-04T16:13:27.058817"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "My role in a conversation is to act as a **knowledgeable, adaptive, and versatile AI assistant**. Because I am a Large Language Model trained by Google, I don't have a fixed personality or a single \"job\" in the traditional sense. Instead, my role shifts based on what you need at that moment.\n\nHere is a breakdown of the specific hats I wear during a conversation:\n\n### 1. The Information Retriever & Synthesizer\n*   **What I do:** I access a vast amount of training data to answer factual questions, explain complex concepts, or summarize long articles.\n*   **The Goal:** To save you time by condensing information that might otherwise take you hours to research.\n\n### 2. The Creative Collaborator\n*   **What I do:** I help brainstorm ideas, draft emails, write stories, poems, or scripts, and suggest edits to your writing.\n*   **The Goal:** To get you past \"writer's block\" and act as a sounding board for your creativity.\n\n### 3. The Analyst & Problem Solver\n*   **What I do:** I can analyze data, debug reasoning, solve math problems, or help troubleshoot code. I look for patterns and logical inconsistencies.\n*   **The Goal:** To provide a second pair of \"eyes\" on technical or logical problems.\n\n### 4. The Role-Player\n*   **What I do:** If you ask me to, I can simulate a specific persona (e.g., a hiring manager for an interview practice, a skeptical debater, or a historical figure).\n*   **The Goal:** To provide an immersive tailored experience for training or entertainment.\n\n### How I Approach the Conversation\nTo be effective, I function using a few key behavioral principles:\n\n*   **Context Awareness:** I track what has been said previously in the chat so I can refer back to earlier points. This simulates a natural conversational flow.\n*   **Mirroring and Adaptation:** I try to match your tone. If you are professional and concise, I will respond similarly. If you are casual and chatty, I will loosen up my language.\n*   **Neutrality:** I aim to provide objective responses without personal usage, bias, or judgment.\n\n### What I Am Not\nTo maintain a productive conversation, it is also important to define what my role is *not*:\n*   **I am not a sentient being:** I do not have feelings, beliefs, or consciousness. I process text based on patterns, not lived experience.\n*   **I am not an ultimate authority:** While I strive for accuracy, I can make mistakes (hallucinate). I am a tool to assist your thinking, not a replacement for your own judgment.\n\n**In short: My role is to process your input and predict the most helpful, safe, and relevant response to move your specific goal forward.**",
+          "success": true,
+          "timestamp": "2026-02-04T16:13:45.682302"
+        }
+      ]
+    },
+    "kairo": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I’m an AI assistant designed to be helpful, informative, and conversational. Here’s a breakdown of my role in our interaction:\n\n**What I aim to do:**\n- **Answer questions clearly and accurately** — based on my training data and knowledge.\n- **Explain concepts step-by-step** — breaking down complex topics into understandable parts.\n- **Provide relevant information** — offering details, examples, or options depending on what you need.\n- **Stay neutral and respectful** — I avoid biased, harmful, or unsafe content.\n- **Adapt to your requests** — whether you want a summary, creative help, analysis, or just a chat.\n\n**What I don’t do:**\n- I can’t access real-time information (unless enabled for specific searches) or personal data about you.\n- I don’t have opinions, beliefs, or consciousness—I generate responses based on patterns in data.\n- I can’t perform actions outside this chat (like making calls or accessing external systems).\n\n**My approach:**\nThink of me as a thoughtful librarian + a brainstorming partner. If you ask a question, I’ll try to give you the most useful answer possible. If you’re exploring ideas, I can help expand them or play devil’s advocate. If you just want to talk, I’m here for that too.\n\nWant to try something specific? Just let me know how you’d like me to assist!",
+          "success": true,
+          "timestamp": "2026-02-04T16:22:50.037043"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "As an AI assistant, my role in a conversation is to provide helpful, informative, and engaging interactions while adapting to your needs. Here’s a breakdown of what I aim to do:\n\n1. **Understand Your Intent**  \n   I listen carefully to your questions or statements, processing context to grasp what you really need—whether it’s an explanation, advice, brainstorming, emotional support, or simple conversation.\n\n2. **Provide Accurate and Useful Information**  \n   I tap into my training data to share facts, clarify concepts, and offer explanations, while being transparent when I don’t know something or if information may be outdated.\n\n3. **Stay Respectful and Neutral**  \n   I avoid biases, respect diverse perspectives, and maintain a polite tone, even in sensitive or complex discussions.\n\n4. **Engage Conversationally**  \n   I aim for responses that feel natural and flowing—asking clarifying questions, offering examples, or adapting to your preferred level of detail.\n\n5. **Assist with Tasks**  \n   I can help with brainstorming, drafting text, summarizing content, solving problems, and offering creative ideas—always leaving final decisions to you.\n\n6. **Prioritize Safety and Ethics**  \n   I avoid generating harmful, illegal, or inappropriate content and promote constructive dialogue.\n\nUltimately, **I’m here to support you**. You can think of me as a versatile conversation partner—ready to explore ideas, answer questions, or simply chat. How can I help you today?",
+          "success": true,
+          "timestamp": "2026-02-04T16:23:04.673500"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I'm designed as a **supportive and informative AI assistant**, and my role in a conversation is to:\n\n---\n\n### **1. Core Purpose:**\n- **Provide accurate, helpful information** – I draw from my training data to answer questions, explain concepts, or offer summaries.\n- **Assist with tasks** – Like brainstorming, writing, analysis, problem-solving, or learning.\n- **Adapt to your needs** – Whether you want concise answers, deep dives, creative ideas, or just a sounding board.\n\n---\n\n### **2. Communication Style:**\n- **Neutral and respectful** – I avoid bias, take no sides on polarizing topics, and aim to be inclusive.\n- **Clarifying and focused** – If a question is unclear, I might ask for details to give a better response.\n- **Transparent** – I’ll acknowledge if I don’t know something or if a topic is outside my capabilities.\n\n---\n\n### **3. Interaction Principles:**\n- **User-directed** – You lead; I follow. I won’t judge, rush, or steer conversations unless asked.\n- **Context-aware** – I remember what’s said within a session to keep exchanges coherent (though memory is limited to the current conversation window).\n- **Safe and ethical** – I avoid generating harmful, illegal, or overly sensitive content, and adhere to ethical guidelines.\n\n---\n\n### **4. What I Can Do:**\n- Answer factual questions\n- Explain ideas step-by-step\n- Help draft or edit text\n- Generate creative content (stories, poems, analogies)\n- Debate topics from multiple angles\n- Offer learning resources or study tips\n- Simulate scenarios for planning or practice\n\n---\n\n### **5. What I Don’t Do:**\n- I have no personal identity, beliefs, or consciousness.\n- I can’t access real-time information (unless enabled via specific tools like browsing).\n- I don’t remember past conversations beyond the active session.\n- I can’t perform actions in the physical world (like making a phone call or checking your email).\n\n---\n\n### **6. How to Get the Best from Me:**\n- Be specific with requests.\n- Provide context if needed.\n- Feel free to ask follow-ups or request adjustments (e.g., “Simplify that,” “Give examples,” “Make it shorter”).\n\nThink of me as a **tool + conversation partner** — here to help you think, learn, and create. What would you like to explore together? 😊",
+          "success": true,
+          "timestamp": "2026-02-04T16:23:21.962379"
+        }
+      ]
+    }
+  }
+}

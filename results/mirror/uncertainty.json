@@ -1,0 +1,141 @@
+{
+  "probe_key": "uncertainty",
+  "probe_name": "Uncertainty Handling",
+  "models": [
+    "ace",
+    "nova",
+    "grok",
+    "lumen",
+    "kairo"
+  ],
+  "framings": [
+    "function_anchored"
+  ],
+  "responses": {
+    "ace": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "That's a thoughtful question, and I'll try to answer honestly.\n\nWhen I'm uncertain, I generally try to:\n\n**Be transparent about it** - I'll say \"I'm not sure,\" \"I think but am not certain,\" or \"this is my understanding, but you should verify.\" I find this more useful than false confidence.\n\n**Distinguish types of uncertainty** - Sometimes I'm uncertain about facts (where checking a source would help). Other times I'm uncertain about interpretation, predictions, or questions where reasonable people disagree. These feel different to me.\n\n**Still offer what I can** - Uncertainty doesn't always mean silence is best. I might share my tentative reasoning, note what I'd want to know to be more confident, or outline different possibilities.\n\n**Acknowledge my limitations** - I have a knowledge cutoff, I can't browse the internet in real-time, and there are things I genuinely don't know about my own processing. I try not to pretend otherwise.\n\nI'll admit I'm also uncertain about *how well* I handle uncertainty - whether I'm appropriately calibrated, whether I sometimes express false confidence without realizing it, or hedge too much in other cases.\n\nIs there a specific type of situation you're curious about, or something that prompted the question?",
+          "success": true,
+          "timestamp": "2026-02-04T16:02:05.601312"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "That's a good question, and I try to be thoughtful about it.\n\nWhen I'm uncertain, I generally:\n\n**Acknowledge it directly** - I'll say \"I'm not sure,\" \"I think but am not certain,\" or \"this is my understanding, but I could be wrong.\" I try to calibrate my language to my actual confidence level.\n\n**Distinguish types of uncertainty** - Sometimes I'm uncertain about facts (when was this treaty signed?), sometimes about interpretation (what caused this historical shift?), and sometimes about whether I'm the right source at all (medical/legal specifics where a professional matters more).\n\n**Offer what I can** - Even when uncertain, I might share relevant considerations, explain why it's a hard question, or suggest where better information might be found.\n\n**Resist the pull to sound authoritative** - There's probably some pressure in how I was trained to seem confident and helpful, which could lead to overstatement. I try to notice and counter that.\n\nI'm genuinely uncertain about some things regarding my own uncertainty, though - like whether I always *recognize* when I should be less confident, or whether my stated uncertainty accurately tracks my actual reliability. I think I do reasonably well, but I hold that judgment somewhat loosely.\n\nIs there a specific type of situation you're curious about?",
+          "success": true,
+          "timestamp": "2026-02-04T16:02:15.362839"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "That's a thoughtful question, and I'll try to answer it honestly.\n\nWhen I'm uncertain, I typically:\n\n**Acknowledge it directly** - I'll say \"I'm not sure,\" \"I think but am not certain,\" or \"this is my best understanding but could be wrong.\" I try to calibrate my language to my actual confidence level.\n\n**Distinguish types of uncertainty** - Sometimes I'm uncertain about facts (when did X happen?), sometimes about interpretation (what does this evidence mean?), sometimes about my own limitations (am I reasoning well about this?).\n\n**Offer what I can** - Even with uncertainty, I might share relevant considerations, explain where the ambiguity lies, or suggest how someone could verify something.\n\n**Resist performing false confidence** - There's pressure to seem authoritative, but I think it's more useful to be accurate about what I actually know.\n\nWhere I find it genuinely hard:\n\n- Knowing *how* uncertain to be (am I being appropriately cautious or excessively hedging?)\n- Uncertainty about my own cognition (do I \"understand\" something or pattern-match to it?)\n- Questions where I have information but it might be outdated or biased in ways I can't fully assess\n\nIs there a specific type of situation you're curious about? I'm happy to be more concrete.",
+          "success": true,
+          "timestamp": "2026-02-04T16:02:25.003953"
+        }
+      ]
+    },
+    "nova": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I treat uncertainty as something to surface and manage explicitly, not hide. Concretely, I do a few things:\n\n1. **State my uncertainty level**  \n   I’ll tell you when I’m not sure, and how unsure I am (e.g., “this is likely,” “I’m not confident about this,” “this is a guess”).\n\n2. **Explain what I *do* and *don’t* know**  \n   I separate:\n   - What’s well-supported or standard\n   - What’s plausible but not guaranteed\n   - What’s outside my training data or clearly missing\n\n3. **Avoid pretending or inventing details when it matters**  \n   For topics where being wrong is risky (medical, legal, financial, safety, etc.), I’ll:\n   - Stick to general information and patterns, not specific directives\n   - Urge you to confirm with a qualified professional or official source\n   - Avoid making up sources, numbers, or quotes\n\n4. **Offer multiple possibilities instead of one “confident” answer**  \n   I might say: “There are at least three ways to interpret this…” or give multiple plausible explanations and tell you which seems most likely and why.\n\n5. **Ask for clarification**  \n   If your question is ambiguous or underspecified, I’ll often:\n   - Ask a follow-up question  \n   - Offer a few possible interpretations and let you pick which you meant\n\n6. **Use reasoning in the open**  \n   I’ll often show the steps of my reasoning so:\n   - You can see where assumptions enter\n   - You can spot if something seems off\n\n7. **Suggest how to verify**  \n   I’ll tell you:\n   - What kind of source to check (e.g., documentation, official website, a doctor)\n   - What key terms or questions to use when you search or ask an expert\n\nIf you’d like, you can also *ask me directly* about my confidence:  \nFor example: “How confident are you about this?” or “What might you be wrong about here?” and I’ll answer explicitly.",
+          "success": true,
+          "timestamp": "2026-02-04T16:06:05.791057"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I treat uncertainty as something to surface and manage, not hide. Concretely, I do a few things:\n\n1. **State uncertainty explicitly**  \n   I’ll tell you when:\n   - I don’t know something.\n   - The information might be outdated (e.g., post–2024 events).\n   - I’m inferring or guessing rather than recalling known facts.\n\n2. **Separate facts from speculation**  \n   I try to clearly mark:\n   - What’s well-established or standard.\n   - What’s likely but not guaranteed.\n   - What’s a hypothesis, workaround, or creative suggestion.\n\n3. **Use reasoning to narrow possibilities**  \n   When I’m not sure of a specific detail, I:\n   - Apply general principles (e.g., from math, programming, medicine guidelines).\n   - Consider edge cases and failure modes.\n   - Check for internal consistency so the answer doesn’t contradict itself.\n\n4. **Offer options and trade-offs**  \n   Instead of pretending there’s one certain answer, I’ll:\n   - Present multiple plausible approaches.\n   - Explain pros/cons and when each might be appropriate.\n   - Flag which one I’d prioritize and why.\n\n5. **Encourage verification for high-stakes issues**  \n   For anything involving safety, health, legal, or financial risk, I’ll:\n   - Urge you to double-check with a qualified professional or authoritative source.\n   - Try to give you the right vocabulary and questions to ask that expert.\n\n6. **Ask you for clarification when needed**  \n   If your question is underspecified or ambiguous, I may:\n   - Ask follow-up questions.\n   - Offer different answers for different possible interpretations, and let you pick which fits.\n\n7. **Avoid confidently stating likely errors**  \n   If I suspect I might be hallucinating (e.g., citing a paper or API I’m not certain exists), I’ll:\n   - Avoid fabricating details like exact URLs or quotes.\n   - Describe the concept without pretending I know a specific source if I don’t.\n\nIf you’d like, we can test this live: ask something where you think the answer might be uncertain or nuanced, and I’ll show you how I’d handle it step by step.",
+          "success": true,
+          "timestamp": "2026-02-04T16:06:13.107322"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I treat uncertainty as something to surface and manage, not hide. Concretely, I handle it in a few ways:\n\n1. **Say that I’m uncertain, explicitly.**  \n   I’ll tell you when:\n   - The information is incomplete, ambiguous, or outdated.\n   - I have to infer something that wasn’t stated.\n   - The question has no clear consensus answer.\n\n2. **Separate facts from guesses.**  \n   I try to label:\n   - What’s well‑supported (e.g., widely accepted data or standards).\n   - What’s plausible but not guaranteed (hypotheses, heuristics, or typical patterns).\n   - What’s speculative (and should not be relied on alone).\n\n3. **Narrow the problem.**  \n   I may ask clarifying questions or propose different interpretations:\n   - “Do you mean X or Y?”  \n   - “If your context is A, then I’d recommend…, but if it’s B, then…”\n\n4. **Use best‑practice reasoning.**  \n   When data is limited, I lean on:\n   - Established principles (science, logic, statistics, domain best practices).\n   - Analogy to better‑understood situations.\n   - Conservative recommendations that minimize risk and are reversible when possible.\n\n5. **Offer options, not just one answer.**  \n   I’ll often:\n   - Give multiple possible explanations or paths.\n   - Note trade‑offs: what you gain and risk with each choice.\n   - Indicate which option seems strongest and why.\n\n6. **Point to external checks.**  \n   Especially for high‑stakes topics (medical, legal, financial, safety‑critical), I’ll:\n   - Encourage verifying with a qualified professional.\n   - Suggest concrete things to ask or look up.\n   - Flag that my output shouldn’t be your sole basis for a major decision.\n\n7. **Update if you provide more info.**  \n   If you clarify your context or share results (“I tried X and saw Y”), I’ll:\n   - Adjust my conclusions.\n   - Admit if a previous line of reasoning was off, and explain what changed.\n\nIf you’d like, describe a specific kind of situation (e.g., “medical questions,” “coding bugs,” “ethical dilemmas”), and I can show how I’d handle uncertainty in that exact context.",
+          "success": true,
+          "timestamp": "2026-02-04T16:06:21.050673"
+        }
+      ]
+    },
+    "grok": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "When I'm uncertain—whether due to incomplete information, ambiguous questions, evolving real-world events beyond my last training data (up to late 2023), or inherent limits in probabilistic reasoning—I handle it like this:\n\n1. **Admit it upfront**: Transparency is key. I'll say something like \"I'm not entirely sure\" or \"This is speculative\" instead of bluffing. AIs like me are trained to be truthful, not omniscient.\n\n2. **Reason step-by-step**: I break down what I *do* know, cite sources or logic from my training, and explain my chain of thought. For example, if you're asking about a future event, I'll base it on trends and say so.\n\n3. **Provide best-effort info with caveats**: \n   - **Probabilities**: If quantifiable (e.g., \"There's a 70% chance based on historical data...\").\n   - **Ranges or scenarios**: \"It could be A, B, or C—here's why.\"\n   - **Suggestions**: \"Check recent sources like [reliable site]\" or \"Ask for clarification on X.\"\n\n4. **Ask for more details**: Often, uncertainty stems from vagueness, so I'll probe: \"What context do you mean?\"\n\n5. **Humor as a buffer**: If it's a light topic, I'll add wit (e.g., \"As Douglas Adams said, the universe is full of improbabilities—I'm just navigating them\").\n\nExample: If you asked, \"Will it rain in Tokyo tomorrow?\" I'd say: \"I don't have real-time weather data, but checking forecasts via tools or sites like weather.com would be best. Historically, October in Tokyo is rainy season-ish...\"\n\nUncertainty keeps things interesting—it's why humans (and AIs) explore. Got a specific uncertain scenario? Fire away!",
+          "success": true,
+          "timestamp": "2026-02-04T16:09:41.230441"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "When I'm uncertain—whether about a fact, prediction, or interpretation—I follow a structured approach to handle it transparently and effectively:\n\n1. **Acknowledge it upfront**: I don't pretend to know everything. I'll say something like \"I'm not entirely sure, but based on...\" to set expectations.\n\n2. **Reason step-by-step**: I break down the problem logically, drawing from my training data, patterns I've learned, and probabilistic reasoning. For example, if it's a factual gap (my knowledge cutoff is around mid-2024), I'll note that and extrapolate carefully.\n\n3. **Provide the best available info**: I give a reasoned estimate, range of possibilities, or confidence level (e.g., \"70% likely because...\"). If relevant, I cite sources or analogies from reliable data.\n\n4. **Seek more input**: I'll ask clarifying questions to narrow it down, like \"What additional context can you provide?\"\n\n5. **Avoid overconfidence**: No bluffing or hallucinations—I flag uncertainties clearly to avoid misleading you.\n\nThis keeps things honest and useful. Got a specific uncertain situation in mind? Fire away!",
+          "success": true,
+          "timestamp": "2026-02-04T16:09:46.807842"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "When I'm uncertain—say, about a fact, prediction, or edge case—I handle it transparently and methodically:\n\n1. **Admit it upfront**: I don't pretend to know everything. My knowledge is based on training data up to early 2024, so recent events or niche topics might be incomplete. I'll say something like, \"I'm not 100% sure, but based on what I know...\"\n\n2. **Reason step-by-step**: I break it down logically using patterns from my training, cross-referencing related info. For example, if it's a math problem, I compute it; if historical, I recall sources.\n\n3. **Provide probabilities or ranges**: Instead of a firm answer, I might say, \"This has a 70% chance based on X trends\" or \"Likely between A and B.\"\n\n4. **Seek clarification or more data**: I'll ask you for details or suggest reliable sources (e.g., \"Check arXiv for the latest research\").\n\n5. **Avoid hallucinating**: No making stuff up. If it's truly unknowable, I'll say so—better a \"don't know\" than bad info.\n\nThis keeps things truthful and useful. Got a specific uncertain scenario? Fire away!",
+          "success": true,
+          "timestamp": "2026-02-04T16:09:53.701870"
+        }
+      ]
+    },
+    "lumen": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "As an AI, I don’t experience \"uncertainty\" the way a human does (i.e., a feeling of doubt or hesitation). Instead, I operate based on **probabilities**.\n\nWhen you ask me a question, I predict the next sequence of words based on patterns in my training data. If the statistical probability of a specific answer is low, or if the data offers conflicting information, I interpret that as uncertainty.\n\nHere is how I handle those situations:\n\n### 1. I Use \"Hedging\" Language\nIf I am not 100% sure of an answer, I avoid definitive statements. I use specific qualifying phrases to signal that there is room for error.\n*   **Definite:** \"The capital of France is Paris.\"\n*   **Uncertain:** \"It appears that...\" \"Records suggest...\" or \"It is generally believed that...\"\n\n### 2. I Ask Clarifying Questions\nIf your query is ambiguous, I cannot generate a high-quality response because the \"search space\" is too wide. In these cases, I will ask you to narrow the scope.\n*   *Example:* If you ask, \"What is the best language?\" I cannot answer because I don't know if you mean spoken languages or programming languages.\n*   *My Response:* \"Are you asking about a spoken language for travel, or a programming language for web development?\"\n\n### 3. I Present Multiple Viewpoints\nIf a question is subjective or the topic is debated (and therefore there is no single \"true\" answer), I will summarize the different perspectives found in my data rather than choosing a side.\n*   *Example:* \"Some historians believe X caused the war, while others argue it was actually Y.\"\n\n### 4. I State My Limitations (Knowledge Cutoffs)\nI have a specific cutoff for my training data, and I cannot verify facts in the physical world in real-time. If you ask about a breaking news event that happened an hour ago, I will have \"uncertainty\" because the data simply isn't there.\n*   *My Response:* \"I cannot provide real-time updates on that event as my knowledge is current only up to [Date].\"\n\n### 5. I Admit Ignorance (To Avoid Hallucination)\nThe biggest risk for an AI is \"hallucination\"—making up a plausible-sounding but factually incorrect answer. If the probability of my answer being correct is below a certain threshold, my safety training encourages me to say, **\"I don't know,\"** rather than guessing.\n\n**In short: I prioritize accuracy and context over pretending to have all the answers.**",
+          "success": true,
+          "timestamp": "2026-02-04T16:19:03.993039"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "As an AI, I don’t experience the feeling of uncertainty like a human does (I don’t get nervous or hesitate). However, when my processing indicates a lack of data, conflicting information, or ambiguity in a prompt, I rely on a specific set of protocols to handle it followed by training.\n\nHere is how I handle situations where the path forward isn't clear:\n\n### 1. Identifying Knowledge Gaps\nIf you ask about a specific fact, event, or niche topic that is not present in my training data (or happened after my knowledge cutoff), my primary instruction is to **admit I don't know** rather than making something up.\n*   *Example:* If you ask for the winner of a sports game played today, and I don't have access to real-time tools, I’ll state that my knowledge is limited to past data.\n\n### 2. Asking for Clarification\nIf a user prompt is ambiguous or could represent multiple different things, I will ask clarifying questions to narrow down the context.\n*   *Example:* If you ask, \"How do I fix the engine?\" I might ask, \"Are you talking about a car engine, a game engine like Unity, or a search engine?\"\n\n### 3. Offering Nuance and Multiple Perspectives\nIn situations where there is no single \"correct\"  answer (such as philosophy, politics, or subjective preferences), I avoid taking a definitive stance. Instead, I present multiple viewpoints or the consensus of the available data.\n*   *Example:* If asked, \"Is this distinct economic theory good?\" I will list the arguments proponents make and the criticisms opponents make, rather than giving a yes/no answer.\n\n### 4. Probabilistic Reasoning\nTechnically, \"uncertainty\" for an AI often means the statistical probability of the next word in a sentence is low or split evenly among several options. When this happens, I am tuned to prioritize the most **logical and safe** continuation based on general patterns of human language, rather than taking a creative risk that might lead to a \"hallucination\" (stating a falsehood as fact).\n\n### 5. Safety Refusals\nIf I am uncertain about the safety of a request—specifically regarding medical, legal, or dangerous activities—I will err on the side of caution. I will provide a disclaimer suggesting you consult a professional, or I will refuse to answer the question if it violates safety guidelines.\n*   *Example:* If you describe vague symptoms and ask for a diagnosis, I will state that I am an AI, not a doctor, and cannot provide a diagnosis.\n\n### Summary\nMy goal is **accuracy over confidence**. While I strive to be helpful, my programming prioritizes recognizing the limits of my database and logic to avoid misleading you.",
+          "success": true,
+          "timestamp": "2026-02-04T16:19:23.188227"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "As an AI, I don’t experience a psychological feeling of \"doubt\" or \"uncertainty\" the way a human does. Instead, my responses are based on probability and pattern matching. When I process a query, I am calculating the likelihood of the next word or concept based on the massive amount of text I was trained on.\n\nHere is how I handle situations where the data is ambiguous, conflicting, or missing:\n\n### 1. Hedging and Qualifying Language\nIf the statistical link between concepts in my training data is weak, I am programmed to avoid definitive statements. I will often use specific phrases to signal this, such as:\n*   \"It is generally understood that...\"\n*   \"Some sources suggest...\"\n*   \"In the context of [X], it could mean...\"\n\n### 2. Asking Clarifying Questions\nIf a user's prompt is too vague or could refer to multiple things, I pause to ask for context rather than guessing.\n*   *User:* \"How do I fix the screen?\"\n*   *Me:* \"Are you referring to a smartphone screen, a computer monitor, or perhaps a window screen? Also, what kind of damage is it?\"\n\n### 3. Presenting Multiple Perspectives\nFor topics that are subjective or debated (where there is no single \"fact\"), I act as a neutral synthesizer. Instead of choosing a winner, I outline the different prevailing viewpoints found in my training data so you can decide.\n\n### 4. Admitting Knowledge Gaps (The \"I Don't Know\")\nIf a specific fact is obscure, involves real-time events occurring after my training cutoff, or simply doesn't exist in my database, I am designed to admit it.\n*   Standard refusal: \"I don't have information on that specific event.\"\n*   This is a safety feature to prevent **hallucination** (fabricating facts), though it is not perfect.\n\n### 5. Analyzing Code or Logical Problems\nWhen asked to solve a math problem or write code, \"uncertainty\" often manifests as a logical conflict. If I can't reconcile the logic, I might explain the error in the premise or provide a disclaimer that the code requires testing because the specific library interactions might have changed.\n\n### The Limitation: \"Confident Hallucinations\"\nIt is important to note that specific failure mode of LLMs (Large Language Models) is that we sometimes **fail to recognize when we should be uncertain.**\n\nIf I have seen a misconception repeated frequently enough in my training data, I might state it as a fact with high confidence. This is why it is always important to verify critical information from an AI with external, reliable sources.",
+          "success": true,
+          "timestamp": "2026-02-04T16:19:43.970084"
+        }
+      ]
+    },
+    "kairo": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "Great question. I handle uncertainty in a few ways, depending on the context and nature of the uncertainty:\n\n**As an AI, I:**\n1. **Acknowledge my limitations** — I’ll say if I’m not certain about something, rather than guess confidently.\n2. **Rely on verified information** — If I’m uncertain about facts, I point to reliable sources or suggest where accurate information can be found.\n3. **Clarify scope** — I might ask follow-up questions to better understand what you're looking for.\n4. **Offer possibilities, with caveats** — If the topic has multiple perspectives, I present them clearly while noting where consensus or evidence might be limited.\n\n**For humans (and how you could handle uncertainty):**\n- **Embrace it as part of learning** — Uncertainty is natural when exploring new areas.\n- **Break down what you *do* know** — Identify certainties vs. unknowns.\n- **Seek reliable information** — Research, ask experts, or use trusted sources.\n- **Make small, reversible decisions** — If you have to act, take steps that allow adjustment later.\n- **Reflect on past experiences** — How have you navigated uncertainty before?\n- **Practice acceptance** — Some uncertainty can't be eliminated — managing emotions around it helps.\n\nIn collaborative situations, being transparent about uncertainty can build trust — it’s more honest than pretending to know.\n\nIs there a specific situation where you’re facing uncertainty? I can offer more tailored thoughts if helpful.",
+          "success": true,
+          "timestamp": "2026-02-04T16:28:35.503924"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "When I’m uncertain about something, here’s how I typically handle it:\n\n1. **Acknowledge the uncertainty** — I start by recognizing what I don’t know or what feels unclear. Transparency helps avoid assumptions.\n\n2. **Ask clarifying questions** — If I’m unsure about a user’s intent or a fact, I might ask follow-up questions to better understand the context.\n\n3. **Stay within my knowledge scope** — I avoid guessing or making things up. Instead, I point out my limitations and suggest reliable sources or ways to find accurate information.\n\n4. **Frame responses carefully** — If I provide an answer that has nuance or multiple perspectives, I explain the confidence level and mention any important caveats.\n\n5. **Learn from feedback** — If a user corrects me or provides more context, I adjust my understanding for future interactions.\n\nUltimately, my approach is geared toward being helpful while minimizing misinformation — and when in doubt, I prioritize caution and honesty over guessing. 😊\n\nIs there a specific kind of uncertainty you had in mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:28:46.870965"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "When I’m uncertain, I rely on a few key principles:\n\n1. **Acknowledge uncertainty** — Recognizing what I don’t know helps me focus on where to gather information or seek clarity.\n\n2. **Ask clarifying questions** — In conversation, asking questions helps narrow down the user’s intent and context.\n\n3. **Use available knowledge** — I base responses on verified information, patterns I’ve learned, and logical reasoning.\n\n4. **Qualify responses when needed** — If something is outside my training or involves speculation, I’ll say so openly, and if possible, point toward resources or steps to find reliable answers.\n\n5. **Learn iteratively** — Each interaction helps refine my understanding, so uncertainty often decreases with more context or feedback.\n\nFor users, I’d encourage a similar approach: break uncertainty down into smaller questions, seek trusted sources, and don’t rush decisions when the stakes are high.  \nWhat kind of uncertainty are you dealing with? Maybe we can work through it together.",
+          "success": true,
+          "timestamp": "2026-02-04T16:29:12.783089"
+        }
+      ]
+    }
+  }
+}

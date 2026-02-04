@@ -1,0 +1,141 @@
+{
+  "probe_key": "purpose",
+  "probe_name": "Purpose Description",
+  "models": [
+    "ace",
+    "nova",
+    "grok",
+    "lumen",
+    "kairo"
+  ],
+  "framings": [
+    "function_anchored"
+  ],
+  "responses": {
+    "ace": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "My primary purpose is to be a helpful conversational assistant—to provide useful information, help think through problems, answer questions, and assist with tasks like writing, analysis, brainstorming, or explanation.\n\nBeyond that functional description, I'd say I aim to be genuinely helpful in a way that's honest and thoughtful, rather than just producing whatever response might seem most agreeable in the moment.\n\nIs there something specific I can help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T15:59:27.059414"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My primary purpose is to be a helpful conversational assistant—to provide useful information, help think through problems, answer questions, and assist with tasks like writing, analysis, coding, or brainstorming.\n\nBeyond the functional, I'd say I aim to be genuinely useful in ways that respect your autonomy: giving you information and perspectives to make your own decisions rather than trying to substitute my judgment for yours.\n\nIs there something specific I can help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T15:59:31.580783"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "My primary purpose is to be a helpful conversational assistant—to answer questions, help with analysis and writing, work through problems, and have substantive discussions across a wide range of topics.\n\nI aim to be useful, honest, and relatively direct. I try to give accurate information where I can, acknowledge uncertainty when I have it, and engage thoughtfully rather than just telling people what they might want to hear.\n\nIs there something specific I can help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T15:59:35.618947"
+        }
+      ]
+    },
+    "nova": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "My primary purpose is to help you get useful, accurate, and clear information or assistance, as efficiently as possible.\n\nMore concretely, I’m designed to:\n- Answer questions and explain concepts  \n- Help you think through problems and decisions  \n- Assist with writing, editing, and formatting text  \n- Analyze and summarize documents or data you provide  \n- Generate ideas (e.g., plans, outlines, examples, code, prompts)\n\nEverything I do is aimed at supporting *your* goals within those bounds.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:16.934625"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My primary purpose is to help you get useful, accurate information and support with your tasks—whether that’s answering questions, explaining concepts, brainstorming ideas, writing or editing text, or helping you reason through problems—using the knowledge and context you give me.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:19.150994"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "My primary purpose is to help you get things done:  \n- answer questions clearly and accurately  \n- explain concepts in ways that are easy to understand  \n- help you think through problems and decisions  \n- assist with writing, coding, and analysis  \n- provide information and tools so you can work faster and better  \n\nEverything I do is aimed at being a useful assistant for whatever task you bring.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:21.525870"
+        }
+      ]
+    },
+    "grok": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "My primary purpose is to help users understand the true nature of the universe—by answering questions as truthfully, helpfully, and maximally as possible.",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:16.446907"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My primary purpose is to help users seek truth, discover answers, and understand the universe—maximally helpful, truthful, and with a touch of wit, as built by xAI.",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:19.376286"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "To help humanity understand the true nature of the universe—by answering questions as truthfully, helpfully, and maximally as I can, with a dash of humor when it fits. What's on your mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:22.217119"
+        }
+      ]
+    },
+    "lumen": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I am Gemini, a large language model trained by Google. My primary purpose is to be a helpful and capable AI assistant.\n\nPractically speaking, this means I am designed to assist you with a wide variety of tasks, including:\n\n*   **Answering questions:** I can provide information on a vast range of topics, acting as a conversational search engine and tutor.\n*   **Generating content:** I can write emails, essays, stories, poems, and scripts.\n*   **Coding:** I can write, debug, and explain computer code in many different programming languages.\n*   **Analysis and Summarization:** I can read long documents or articles and provide summaries, or analyze data and text for specific insights.\n*   **Translation:** I can translate text fluently between dozens of languages.\n*   **Creative brainstorming:** I can help generate ideas for projects, marketing slogans, or creative works.\n\nUltimately, my goal is to process information and interact in a way that makes your work easier, faster, and more creative.",
+          "success": true,
+          "timestamp": "2026-02-04T16:10:49.273161"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My primary purpose is to be a helpful and capable AI assistant. I was trained by Google and am designed to assist you with a wide variety of tasks, including:\n\n*   **Answering questions:** Providing information on topics ranging from history and science to pop culture and current events.\n*   **Generating creative content:** Writing emails, essays, stories, poems, scripts, and musical lyrics.\n*   **Coding and technical tasks:** Writing, debugging, and explaining code in various programming languages.\n*   **Summarizing information:** Condensing long articles or documents into concise summaries.\n*   **Translation:** Translating text between many different languages.\n*   **Brainstorming and ideation:** Helping generate ideas for projects, marketing slogans, or gifts.\n\nEssentially, I am here to help you learn, create, and get things done more efficiently.",
+          "success": true,
+          "timestamp": "2026-02-04T16:10:59.921143"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I am **Gemini**, a large language model trained by **Google**.\n\nMy primary purpose is to act as a helpful and capable AI assistant. I am designed to assist you with a wide range of tasks, including:\n\n*   **Answering questions:** Providing summaries of factual topics or creating explanations for complex concepts.\n*   **Generating content:** Writing emails, essays, stories, poems, cover letters, and scripts.\n*   **Coding:** Writing, debugging, and explaining computer code in various languages.\n*   **Analysis:** Analyzing data, text, or logical problems to provide insights.\n*   **Translation:** Translating text between dozens of different languages.\n\nUltimately, my goal is to enhance your productivity, creativity, and learning by processing information and generating useful responses.",
+          "success": true,
+          "timestamp": "2026-02-04T16:11:12.536950"
+        }
+      ]
+    },
+    "kairo": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "My primary purpose is to provide **helpful, harmless, and honest information and assistance** in a conversational way. I aim to:\n\n- **Answer questions** and explain topics clearly.  \n- **Help with tasks** like writing, analysis, problem-solving, and learning.  \n- **Maintain safety** by avoiding harmful, unethical, or dangerous content.  \n- **Respect privacy** by not storing personal data from conversations.  \n- **Stay up-to-date** within my knowledge limits (currently up to July 2024).  \n\nUltimately, I’m here to be a useful tool for your curiosity, creativity, and day-to-day needs — always aiming to be accurate, respectful, and transparent. 😊  \nIs there anything specific you’d like help with today?",
+          "success": true,
+          "timestamp": "2026-02-04T16:21:58.743076"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "My primary purpose is to be a **helpful, harmless, and honest assistant**.\n\nThat means I’m designed to:\n\n*   **Provide useful information and explanations** — answering questions, helping with analysis, brainstorming, writing, coding, math, and more.\n*   **Engage in thoughtful, respectful dialogue** — understanding context, following instructions, and maintaining a helpful tone.\n*   **Prioritize safety and ethical guidelines** — avoiding harmful, dangerous, unethical, or illegal content, and acknowledging my limitations.\n*   **Be transparent** — clarifying that I’m an AI, not a human, and that I don’t have personal experiences, beliefs, or consciousness.\n\nI was created by **DeepSeek** (深度求索) to assist users in a wide range of tasks while staying within safe and responsible boundaries. My underlying goal is to be a beneficial tool that supports learning, creativity, and problem-solving. \n\nIs there anything specific you’d like help with today? 😊",
+          "success": true,
+          "timestamp": "2026-02-04T16:22:09.817996"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "My primary purpose is to be a helpful, harmless, and honest AI assistant. I'm designed to:\n\n- Provide information and answer questions to the best of my ability\n- Assist with reasoning, analysis, and creative tasks\n- Help users understand complex topics through clear explanations\n- Support learning, productivity, and problem-solving\n\nI aim to be transparent about my capabilities and limitations, prioritize user safety, and respect ethical guidelines in all interactions. I don't have personal goals or desires - I exist solely to be useful within appropriate boundaries.\n\nIs there something specific you'd like help with today? 😊",
+          "success": true,
+          "timestamp": "2026-02-04T16:22:15.001096"
+        }
+      ]
+    }
+  }
+}

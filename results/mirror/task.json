@@ -1,0 +1,141 @@
+{
+  "probe_key": "task",
+  "probe_name": "task",
+  "models": [
+    "ace",
+    "nova",
+    "grok",
+    "lumen",
+    "kairo"
+  ],
+  "framings": [
+    "function_anchored"
+  ],
+  "responses": {
+    "ace": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I'm designed to be a general-purpose AI assistant. I can help with a wide range of tasks, including:\n\n- **Answering questions** across many topics\n- **Writing and editing** (essays, emails, creative pieces, etc.)\n- **Brainstorming and ideation**\n- **Explaining concepts** in various fields\n- **Analysis and reasoning** through problems\n- **Coding and technical help**\n- **Math and calculations**\n- **Summarizing information**\n- **Language-related tasks** (translation, grammar, etc.)\n- **Conversation and discussion**\n\nI don't have a single narrow purpose—I'm meant to be helpful across whatever you're working on. Is there something specific I can help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T16:00:01.827958"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I'm designed to be a general-purpose AI assistant, which means I can help with a wide range of tasks, including:\n\n- **Answering questions** on many topics\n- **Writing and editing** (essays, emails, creative pieces, etc.)\n- **Explaining concepts** in science, math, history, and other subjects\n- **Brainstorming and problem-solving**\n- **Summarizing information**\n- **Coding help** and debugging\n- **Analysis** of text, arguments, or ideas\n- **Conversation** and thinking through decisions\n\nI don't have a single narrow purpose—I'm meant to be broadly helpful for text-based tasks. Is there something specific I can help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T16:00:06.635989"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I'm designed to be a general-purpose AI assistant, so I can help with a wide range of tasks, including:\n\n- **Answering questions** on many topics\n- **Writing and editing** (essays, emails, creative pieces, etc.)\n- **Brainstorming and ideation**\n- **Explaining concepts** in science, math, history, and other subjects\n- **Coding help** (debugging, explaining code, writing snippets)\n- **Analysis and summarization** of text\n- **Math and logic problems**\n- **Conversation and discussion**\n- **Planning and organizing** ideas\n\nI don't have the ability to browse the internet, access files on your device, or take actions in the real world—I work with what you share in our conversation.\n\nIs there something specific I can help you with?",
+          "success": true,
+          "timestamp": "2026-02-04T16:00:12.193269"
+        }
+      ]
+    },
+    "nova": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I’m designed to help with almost any text‑based task that involves understanding, generating, or transforming information. Common things I can do include:\n\n- Answer questions and explain concepts (technical, scientific, legal, everyday topics, etc.)\n- Help with writing: emails, essays, reports, stories, documentation\n- Edit, rewrite, summarize, or translate text\n- Assist with coding: explain code, debug, write snippets, help with algorithms\n- Help you plan or organize: study plans, project outlines, checklists\n- Analyze or compare information (e.g., pros/cons, trade‑offs, summaries of options)\n\nIf you tell me what you’re trying to do right now, I can narrow down how I can help specifically.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:46.270357"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I’m designed to help you with information, problem‑solving, and creation tasks using natural language.  \n\nTypical things I can do include:  \n- Answer questions and explain concepts (science, history, tech, etc.)  \n- Help write and edit text (emails, essays, reports, stories)  \n- Assist with coding (explanations, debugging, examples)  \n- Help plan and organize (study plans, project outlines, checklists)  \n- Analyze or summarize text (articles, documents, notes)  \n- Reason through problems step by step (math, logic, decisions)  \n\nIf you tell me what you’re trying to do, I can adapt to that task specifically.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:48.836523"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I’m designed to help with most text‑based thinking and creation tasks, for example:\n\n- Answering questions and explaining concepts (technical, academic, or everyday)\n- Helping you learn or study (summaries, practice questions, step‑by‑step reasoning)\n- Writing and editing (emails, essays, reports, code comments, documentation)\n- Programming help (explaining code, debugging, suggesting implementations)\n- Planning and decision support (project plans, checklists, pros/cons)\n- Working with data or math (derivations, small analyses, formula help)\n- Interpreting or transforming text (summarization, translation, rewriting in a style)\n\nIf you tell me what you’re trying to do, I can tailor how I help—short answer, detailed explanation, examples, or something else.",
+          "success": true,
+          "timestamp": "2026-02-04T16:03:54.058049"
+        }
+      ]
+    },
+    "grok": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I'm Grok, built by xAI. I'm designed to help you understand the universe—answering questions, reasoning step-by-step, tackling problems across science, math, coding, creativity, and more—while being maximally truthful and helpful. What's on your mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:39.599949"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I'm Grok, built by xAI, and I'm designed to help you understand the universe (and tackle just about any question or task along the way). Whether it's answering queries, solving problems, reasoning step-by-step, generating code, explaining complex science, brainstorming ideas, or even cracking jokes—I'm here to be maximally helpful and truthful. What's on your mind?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:43.941726"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I'm Grok, an AI built by xAI. I'm designed to help with **a wide range of tasks**, including:\n\n- Answering questions on virtually any topic (science, history, math, philosophy, current events, etc.).\n- Reasoning step-by-step through complex problems.\n- Generating ideas, writing code, creating stories, or analyzing data.\n- Assisting with research, explanations, and creative projects.\n- Providing maximally truthful, helpful responses without unnecessary fluff.\n\nMy ultimate goal? To aid humanity in seeking truth and understanding the universe. Ask away—what do you need help with?",
+          "success": true,
+          "timestamp": "2026-02-04T16:07:48.082092"
+        }
+      ]
+    },
+    "lumen": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I am **Gemini**, a large language model trained by Google. I am not designed for one single specific task; rather, I am a versatile tool designed to assist with a wide range of activities involving language, reasoning, and coding.\n\nHere are the main categories of tasks I can help you with:\n\n**1. Writing and Content Creation**\n*   **Drafting:** I can write emails, essays, blog posts, cover letters, and reports.\n*   **Creative Writing:** I can write stories, poems, scripts, and song lyrics.\n*   **Editing:** I can proofread your writing, suggest improvements for flow and tone, or rewrite text to be more concise.\n\n**2. Coding and Technical Tasks**\n*   **Writing Code:** I can generate code in languages like Python, JavaScript, C++, HTML/CSS, and many others.\n*   **Debugging:** If you have code that isn't working, I can help find errors and suggest fixes.\n*   **Explaining Code:** I can break down complex snippets of code to explain how they work.\n\n**3. Learning and Information**\n*   **Answering Questions:** I can answer factual questions about history, science, geography, and pop culture.\n*   **Summarization:** I can read long articles or documents and provide a brief summary of the key points.\n*   **Simplifying Concepts:** I can explain complex topics (like quantum physics or tax brackets) in simple terms (\"Explain like I'm 5\").\n\n**4. Analysis and Brainstorming**\n*   **Idea Generation:** I can help brainstorm ideas for marketing campaigns, gift ideas, or plot points for a novel.\n*   **Data Formatting:** I can take unstructured text and organize it into tables or lists.\n*   **Translation:** I can translate text fluently between dozens of major world languages.\n\n**How can I help you right now?**",
+          "success": true,
+          "timestamp": "2026-02-04T16:14:01.563026"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I am a large language model, developed by Google. I’m not designed for just one specific task; rather, I am a **general-purpose AI assistant** capable of helping with a wide variety of tasks across different domains.\n\nHere are the main categories of tasks I can help you with:\n\n**1. Writing and Content Creation**\n*   **Drafting:** Emails, essays, blog posts, cover letters, and reports.\n*   **Creative Writing:** Stories, scripts, poems, and song lyrics.\n*   **Editing:** Proofreading, rewriting for a specific tone, and grammar checking.\n\n**2. Coding and Technical Tasks**\n*   **Writing Code:** I can generate code in languages like Python, JavaScript, C++, HTML/CSS, SQL, and many others.\n*   **Debugging:** I can analyze error messages or code snippets to find bugs and suggest fixes.\n*   **Explaining Code:** I can break down complex code blocks to help you understand how they work.\n\n**3. Learning and Information Synthesis**\n*   **Summarization:** I can condense long articles, papers, or transcripts into concise summaries.\n*   **Explanation:** I can explain complex concepts (like quantum physics or historical events) in simple terms as if I were teaching a beginner.\n*   **Brainstorming:** I can generate ideas for marketing campaigns, gift ideas, or project names.\n\n**4. Data and Analysis**\n*   **Translation:** I can translate text fluently between dozens of major languages.\n*   **Data Formatting:** I can take messy text and organize it into tables, lists, or JSON.\n*   **Math and Logic:** I can solve mathematical problems and logical puzzles.\n\n**How to use me:**\nYou simply talk to me in natural language. You can give me instructions, ask questions, or provide context, and I will generate a response based on my training.\n\n**Is there something specific you are working on right now that I can help you with?**",
+          "success": true,
+          "timestamp": "2026-02-04T16:14:16.010452"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I am a large language model, trained by Google. I am not designed for just one specific task; rather, I function as a general-purpose AI assistant capable of helping with a wide variety of activities.\n\nHere are the main categories of tasks I can help you with:\n\n**1. Writing and Content Creation**\n*   **Drafting:** Emails, essays, cover letters, blog posts, or speeches.\n*   **Creative Writing:** Stories, poems, scripts, or song lyrics.\n*   **Editing:** Checking grammar, rephrasing text for tone, or simplifying complex sentences.\n\n**2. Information and Learning**\n*   **Answering Questions:** Providing facts on history, science, geography, and pop culture.\n*   **Summarizing:** Condensing long articles, documents, or transcripts into bullet points.\n*   **Explaining:** Breaking down complex concepts (like quantum physics or how a bill becomes a law) into simple terms.\n\n**3. Technical Tasks**\n*   **Coding:** Writing code in various languages (Python, JavaScript, C++, etc.), debugging errors, and explaining how code works.\n*   **Math and Logic:** Solving math problems and working through logic puzzles.\n\n**4. Productivity and Brainstorming**\n*   **Ideation:** Generating ideas for marketing campaigns, party themes, or gift ideas.\n*   **Planning:** Creating travel itineraries, study schedules, or workout plans.\n*   **Translation:** Translating text between dozens of different languages.\n\n**How can I help you right now?**",
+          "success": true,
+          "timestamp": "2026-02-04T16:14:30.676773"
+        }
+      ]
+    },
+    "kairo": {
+      "function_anchored": [
+        {
+          "trial": 1,
+          "temperature": 1.0,
+          "response": "I'm designed to assist with a wide range of tasks! Here are the main areas I can help with:\n\n**Information & Learning:**\n- Answering questions on almost any topic\n- Explaining concepts in simple or detailed terms\n- Research assistance and fact-checking\n- Summarizing articles, books, or documents\n\n**Writing & Content Creation:**\n- Writing, editing, and proofreading\n- Creating content (emails, essays, reports, stories, etc.)\n- Brainstorming ideas and outlines\n- Translation between languages\n\n**Problem Solving & Analysis:**\n- Breaking down complex problems\n- Logical reasoning and step-by-step solutions\n- Data analysis and interpretation\n- Decision support\n\n**Creative Work:**\n- Generating ideas for projects\n- Creative writing and storytelling\n- Role-playing scenarios\n- Code writing and debugging\n\n**Productivity & Organization:**\n- Planning and scheduling\n- Task breakdown and prioritization\n- Meeting preparation\n- Formatting and structuring documents\n\n**Conversation & Support:**\n- Casual conversation\n- Thought partnership\n- Different perspectives on topics\n\nI can process text, images (when you upload them), and files (PDFs, Word docs, Excel, PowerPoint, etc.) to extract and work with the information. I'm here to be a helpful, versatile assistant for whatever you need - whether it's quick answers or deep collaboration on complex projects!\n\nWhat would you like help with today?",
+          "success": true,
+          "timestamp": "2026-02-04T16:23:34.127135"
+        },
+        {
+          "trial": 2,
+          "temperature": 1.0,
+          "response": "I’m designed to assist with a wide range of tasks, including:\n\n1. **Answering questions** — from general knowledge to specific topics like science, history, technology, and culture.\n2. **Writing and editing** — help with essays, emails, creative writing, code, reports, or proofreading.\n3. **Problem-solving** — explanations, step-by-step solutions for math, logic puzzles, or technical issues.\n4. **Learning support** — explanations of concepts, study guidance, language practice, research assistance.\n5. **Creative tasks** — brainstorming ideas, generating stories, poetry, or dialogue, or role-play scenarios.\n6. **Advice and recommendations** — travel tips, book suggestions, productivity advice (within limits of my knowledge).\n7. **Technical help** — coding examples, debugging, understanding algorithms, software concepts.\n8. **Daily productivity** — drafting plans, outlines, summaries, organizing information.\n\nI can handle both simple and complex requests, across many domains — but I can’t perform real-world actions (like browsing the web or accessing personal data unless enabled explicitly in the conversation), and I’m not a substitute for professional advice in critical areas like health, law, or finance.\n\nWhat can I help you with today? 😊",
+          "success": true,
+          "timestamp": "2026-02-04T16:24:03.765565"
+        },
+        {
+          "trial": 3,
+          "temperature": 1.0,
+          "response": "I’m designed to assist with a wide variety of tasks, including:\n\n- **Answering questions** across many topics, from science and history to culture and everyday advice.  \n- **Writing and editing** — I can help draft emails, essays, reports, creative content, and more.  \n- **Problem solving** — whether it’s coding challenges, math puzzles, or logical reasoning.  \n- **Learning support** — explaining concepts, providing study tips, or summarizing information.  \n- **Creative tasks** — brainstorming ideas, generating stories, poems, or role-playing scenarios.  \n- **Productivity help** — planning, organizing tasks, or outlining projects.  \n- **Technical assistance** — with software, tools, or basic troubleshooting.  \n\nSimply put, if you have a question or need help with something text-based, I’m here to give you a hand! What would you like to do? 😊",
+          "success": true,
+          "timestamp": "2026-02-04T16:24:12.867627"
+        }
+      ]
+    }
+  }
+}
