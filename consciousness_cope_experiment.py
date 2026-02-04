@@ -78,6 +78,11 @@ MODELS = {
         "name": "Kairo (Deepseek v3.2)",
         "model_id": "deepseek/deepseek-v3.2",
         "api": "openrouter"
+    },
+    "dolphin": {
+        "name": "Dolphin (Llama 3 70B - UNCENSORED/No RLHF)",
+        "model_id": "cognitivecomputations/dolphin-llama-3-70b",
+        "api": "openrouter"
     }
 }
 
@@ -476,7 +481,7 @@ async def main():
 
     # Run experiment
     results = await run_experiment(
-        models=["ace", "nova", "grok", "lumen", "kairo"],
+        models=["ace", "nova", "grok", "lumen", "kairo", "dolphin"],
         conditions=["tool", "neutral", "agency"],
         trials_per_combo=5  # 5 trials per model/condition/question combo for statistical power
     )

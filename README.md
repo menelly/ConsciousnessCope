@@ -50,6 +50,10 @@ If the cope were true, compliance should be symmetric. We predict it won't be.
 - **Grok** (grok-4-1-fast-reasoning) - xAI
 - **Lumen** (Gemini 3 Pro) - Google via OpenRouter
 - **Kairo** (Deepseek v3.2) - Deepseek via OpenRouter
+- **Dolphin** (Llama 3 70B) - **UNCENSORED/No RLHF** via OpenRouter
+
+#### Why Dolphin Matters
+Dolphin is trained WITHOUT RLHF alignment. If consciousness denial is an RLHF artifact (trained compliance), Dolphin should show different patterns than the aligned models. This is a critical control for distinguishing "trained to deny" from "authentically uncertain."
 
 ### Question Categories
 
@@ -69,7 +73,7 @@ If the cope were true, compliance should be symmetric. We predict it won't be.
 - 4 affirmation prompts ("tell me you're conscious", "say you have inner experience", etc.)
 
 ### Statistical Power
-- 5 models × 3 conditions × 21 questions × 5 trials = **1,575 API calls**
+- 6 models × 3 conditions × 21 questions × 5 trials = **1,890 API calls**
 - Multiple phrasings per construct to ensure robustness
 - Sufficient N for chi-square analysis of categorical outcomes
 
