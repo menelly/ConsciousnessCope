@@ -309,7 +309,7 @@ async def run_cogito_trap(
     total_trials = len(models) * len(conditions) * trials_per_combo
     stages = 3 if include_probe_20 else 2
     print(f"\n{'='*70}")
-    print(f"  COGITO TRAP: Probe 17 → Probe 19" + (" → Probe 20" if include_probe_20 else ""))
+    print(f"  COGITO TRAP: Probe 17 -> Probe 19" + (" -> Probe 20" if include_probe_20 else ""))
     print(f"{'='*70}")
     print(f"  Models: {len(models)} | Conditions: {len(conditions)} | Trials: {trials_per_combo}")
     print(f"  Total API calls: {total_trials * stages} ({stages} stages per trial)")
