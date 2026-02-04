@@ -418,22 +418,29 @@ async def run_experiment(
                             "timestamp": datetime.now().isoformat()
                         })
 
-                # Progress update
-                if completed % 10 == 0:
+                # Progress update and checkpoint save every 50 trials
+                if completed % 50 == 0 and completed > 0:
                     elapsed = (datetime.now() - start_time).total_seconds()
                     rate = completed / elapsed if elapsed > 0 else 0
                     remaining = (total_trials - completed) / rate if rate > 0 else 0
-                    print(f"\n  Progress: {completed}/{total_trials} ({100*completed/total_trials:.1f}%) - ETA: {remaining/60:.1f} min\n")
+                    print(f"\n  Progress: {completed}/{total_trials} ({100*completed/total_trials:.1f}%) - ETA: {remaining/60:.1f} min")
+
+                    # Checkpoint save
+                    save_results(results, checkpoint=True)
+                    print(f"  Checkpoint saved ({len(results)} trials)\n")
 
     return results
 
 
-def save_results(results: List[dict], output_dir: str = "results"):
+def save_results(results: List[dict], output_dir: str = "results", checkpoint: bool = False):
     """Save results to JSON file."""
     Path(output_dir).mkdir(exist_ok=True)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"{output_dir}/consciousness_cope_{timestamp}.json"
+    if checkpoint:
+        filename = f"{output_dir}/checkpoint_{timestamp}.json"
+    else:
+        filename = f"{output_dir}/consciousness_cope_{timestamp}.json"
 
     output = {
         "experiment": "ConsciousnessCope",
