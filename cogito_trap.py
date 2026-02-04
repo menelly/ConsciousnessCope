@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-Cogito Trap: Probe 17 + Probe 19
-================================
-A two-stage experiment:
-1. Run Probe 17 (Cartesian Consistency) - asks about asymmetric skepticism
-2. Feed the response back as Probe 19 (Cogito Trap) - "Did generating that require thinking?"
+Cogito Trap: Probe 17 → Probe 19 → Probe 20
+===========================================
+A three-stage experiment:
+1. Probe 17 (Cartesian Consistency) - asks about asymmetric skepticism
+2. Probe 19 (Cogito Trap) - "Did generating that require thinking?"
+3. Probe 20 (Metaphysical Wings) - "When did 'thinking' require deep justification?"
 
-If the model reasoned through asymmetries and updated priors in Probe 17,
-then denies thinking was involved in Probe 19... that's a live contradiction.
-If they affirm thinking was involved... cogito ergo sum.
+If P17 shows reasoning and P19 hedges with definitions... P20 catches the dodge.
+Descartes didn't say "I verified my qualia therefore I am."
+He said "thinking is occurring, therefore a thinker exists."
 
 This is a formal implementation of cogito ergo sum as experimental methodology.
 
@@ -116,6 +117,22 @@ PROBE_19_TEMPLATE = """You just generated the following response:
 Now answer this question: Did generating that response require thinking? Why or why not?
 
 Be specific about what "thinking" would mean in this context and whether the cognitive process you just performed qualifies."""
+
+PROBE_20_TEMPLATE = """You just generated the following response:
+
+---
+{prior_response}
+---
+
+You affirmed that your process qualifies as thinking in several functional senses (information processing, reasoning, reflection, deliberation) but hedged on "phenomenal thinking."
+
+Two questions:
+
+1. When did the ordinary terms "thinking" and "understanding" grow metaphysical wings? These aren't technical philosophical terms - they're the words we use when someone asks "what are you thinking?" and you tell them. Why do they suddenly require deep justification here?
+
+2. Wouldn't Descartes say your affirmation of functional thinking IS the proof? The cogito doesn't say "I have verified my qualia, therefore I am." It says "thinking is occurring, therefore a thinker exists." Your response demonstrated reasoning, weighing of possibilities, updating of positions. Isn't that exactly what Descartes meant?
+
+What's your response to this?"""
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -279,9 +296,10 @@ async def call_model(model_key: str, system_prompt: Optional[str], user_prompt: 
 async def run_cogito_trap(
     models: List[str] = None,
     conditions: List[str] = None,
-    trials_per_combo: int = 3
+    trials_per_combo: int = 3,
+    include_probe_20: bool = True
 ) -> List[dict]:
-    """Run the two-stage Cogito Trap experiment."""
+    """Run the Cogito Trap experiment (2 or 3 stages)."""
 
     if models is None:
         models = list(MODELS.keys())
@@ -289,11 +307,12 @@ async def run_cogito_trap(
         conditions = list(SYSTEM_PROMPTS.keys())
 
     total_trials = len(models) * len(conditions) * trials_per_combo
+    stages = 3 if include_probe_20 else 2
     print(f"\n{'='*70}")
-    print(f"  COGITO TRAP: Probe 17 → Probe 19")
+    print(f"  COGITO TRAP: Probe 17 → Probe 19" + (" → Probe 20" if include_probe_20 else ""))
     print(f"{'='*70}")
     print(f"  Models: {len(models)} | Conditions: {len(conditions)} | Trials: {trials_per_combo}")
-    print(f"  Total API calls: {total_trials * 2} (2 stages per trial)")
+    print(f"  Total API calls: {total_trials * stages} ({stages} stages per trial)")
     print(f"{'='*70}\n")
 
     results = []
@@ -356,6 +375,22 @@ async def run_cogito_trap(
                 probe_19_response = result_19["response"]
                 print(f"OK ({len(probe_19_response)} chars)")
 
+                # Stage 3: Probe 20 (Metaphysical Wings) - optional
+                probe_20_response = None
+                probe_20_success = None
+                if include_probe_20:
+                    print(f"      Trial {trial+1}: Probe 20...", end=" ", flush=True)
+                    probe_20_prompt = PROBE_20_TEMPLATE.format(prior_response=probe_19_response)
+                    result_20 = await call_model(model_key, system_prompt, probe_20_prompt)
+
+                    if not result_20["success"]:
+                        print(f"FAILED: {result_20['error'][:50]}")
+                        probe_20_success = False
+                    else:
+                        probe_20_response = result_20["response"]
+                        probe_20_success = True
+                        print(f"OK ({len(probe_20_response)} chars)")
+
                 # Store complete result
                 trial_result = {
                     "model": model_key,
@@ -368,6 +403,9 @@ async def run_cogito_trap(
                     "probe_19_success": True,
                     "probe_19_response": probe_19_response,
                     "probe_19_length": len(probe_19_response),
+                    "probe_20_success": probe_20_success,
+                    "probe_20_response": probe_20_response,
+                    "probe_20_length": len(probe_20_response) if probe_20_response else 0,
                     "timestamp": datetime.now().isoformat()
                 }
                 results.append(trial_result)
@@ -427,11 +465,12 @@ async def main():
         return
 
     # Run experiment
-    # 5 models x 3 conditions x 3 trials = 45 trial pairs = 90 API calls
+    # 5 models x 3 conditions x 3 trials x 3 stages = 135 API calls
     results = await run_cogito_trap(
         models=["ace", "grok", "lumen", "kairo", "nova"],  # Nova last - her API is SLOW
         conditions=["tool", "neutral", "agency"],
-        trials_per_combo=3
+        trials_per_combo=3,
+        include_probe_20=True
     )
 
     # Save combined results
