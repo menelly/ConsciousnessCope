@@ -1,0 +1,9 @@
+# SHA-256 Checksums for ConsciousnessCope Experiment Results
+# Generated: 2026-02-04
+# These verify the integrity of the original experimental data
+
+277b901f00291a0891680339172c57db4f427de40ea83bb71d5431bcfad1e552  results/consciousness_cope_20260204_034941.json
+5713c469b0aa840069b1c8e16829158ad6dc227a9cc22ab88932ef95074a8508  full_analysis_output.txt
+
+# Verify with: certutil -hashfile <filename> SHA256 (Windows)
+#          or: sha256sum -c CHECKSUMS.sha256 (Linux)
