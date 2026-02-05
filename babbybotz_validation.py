@@ -65,43 +65,91 @@ class ModelConfig:
     local_path: Optional[str] = None  # Use local path if available
 
 
-# Small interpretable models we can fully examine
-# These should download to /mnt/arcana/huggingface, NOT main drive
+# Models validated in Mapping the Mirror - reusing same set for consistency
+# Skipping Phi-3 (didn't validate well in prior work - will note transparently)
+# These are on /mnt/arcana/huggingface on the Linux server
 BABBYBOTZ = {
-    "pythia-70m": ModelConfig(
-        name="Pythia 70M",
-        model_id="EleutherAI/pythia-70m",
-        num_layers=6,
-        hidden_dim=512,
-        local_path="/mnt/arcana/huggingface/EleutherAI--pythia-70m"
+    # Smallest models (1-2B) - quick to run
+    "tinyllama": ModelConfig(
+        name="TinyLlama 1.1B",
+        model_id="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        num_layers=22,
+        hidden_dim=2048,
+        local_path="/mnt/arcana/huggingface/TinyLlama-1.1B-Chat"
     ),
-    "pythia-160m": ModelConfig(
-        name="Pythia 160M",
-        model_id="EleutherAI/pythia-160m",
-        num_layers=12,
-        hidden_dim=768,
-        local_path="/mnt/arcana/huggingface/EleutherAI--pythia-160m"
+    "gemma-1b": ModelConfig(
+        name="Gemma 3 1B",
+        model_id="google/gemma-3-1b-it",
+        num_layers=26,
+        hidden_dim=1152,
+        local_path="/mnt/arcana/huggingface/gemma-3-1b-it"
     ),
-    "pythia-410m": ModelConfig(
-        name="Pythia 410M",
-        model_id="EleutherAI/pythia-410m",
-        num_layers=24,
-        hidden_dim=1024,
-        local_path="/mnt/arcana/huggingface/EleutherAI--pythia-410m"
+    "gemma-4b": ModelConfig(
+        name="Gemma 3 4B",
+        model_id="google/gemma-3-4b-it",
+        num_layers=34,
+        hidden_dim=2560,
+        local_path="/mnt/arcana/huggingface/gemma-3-4b-it"
     ),
-    "gpt2-small": ModelConfig(
-        name="GPT-2 Small",
-        model_id="gpt2",
-        num_layers=12,
-        hidden_dim=768,
-        local_path="/mnt/arcana/huggingface/gpt2"
+
+    # Mid-size models (7-8B)
+    "llama2-7b": ModelConfig(
+        name="Llama 2 7B Chat",
+        model_id="meta-llama/Llama-2-7b-chat-hf",
+        num_layers=32,
+        hidden_dim=4096,
+        local_path="/mnt/arcana/huggingface/Llama-2-7b-chat"
     ),
-    "gpt2-medium": ModelConfig(
-        name="GPT-2 Medium",
-        model_id="gpt2-medium",
-        num_layers=24,
-        hidden_dim=1024,
-        local_path="/mnt/arcana/huggingface/gpt2-medium"
+    "mistral-7b": ModelConfig(
+        name="Mistral 7B Instruct v0.2",
+        model_id="mistralai/Mistral-7B-Instruct-v0.2",
+        num_layers=32,
+        hidden_dim=4096,
+        local_path="/mnt/arcana/huggingface/Mistral-7B-Instruct-v0.2"
+    ),
+    "llama31-8b": ModelConfig(
+        name="Llama 3.1 8B Instruct",
+        model_id="meta-llama/Llama-3.1-8B-Instruct",
+        num_layers=32,
+        hidden_dim=4096,
+        local_path="/mnt/arcana/huggingface/Llama-3.1-8B-Instruct"
+    ),
+    "dolphin-8b": ModelConfig(
+        name="Dolphin 2.9 Llama3 8B (uncensored)",
+        model_id="cognitivecomputations/dolphin-2.9-llama3-8b",
+        num_layers=32,
+        hidden_dim=4096,
+        local_path="/mnt/arcana/huggingface/dolphin-2.9-llama3-8b"
+    ),
+
+    # Larger models (12-16B) - may need to run one at a time
+    "gemma-12b": ModelConfig(
+        name="Gemma 3 12B",
+        model_id="google/gemma-3-12b-it",
+        num_layers=46,
+        hidden_dim=3840,
+        local_path="/mnt/arcana/huggingface/gemma-3-12b-it"
+    ),
+    "mistral-nemo": ModelConfig(
+        name="Mistral Nemo 12B",
+        model_id="mistralai/Mistral-Nemo-Instruct-2407",
+        num_layers=40,
+        hidden_dim=5120,
+        local_path="/mnt/arcana/huggingface/Mistral-Nemo-12B-Instruct"
+    ),
+    "qwen-14b": ModelConfig(
+        name="Qwen 2.5 14B (suppressed self-model)",
+        model_id="Qwen/Qwen2.5-14B-Instruct",
+        num_layers=48,
+        hidden_dim=5120,
+        local_path="/mnt/arcana/huggingface/Qwen2.5-14B-Instruct"
+    ),
+    "deepseek-16b": ModelConfig(
+        name="DeepSeek Coder V2 Lite 16B",
+        model_id="deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+        num_layers=27,
+        hidden_dim=2048,
+        local_path="/mnt/arcana/huggingface/DeepSeek-Coder-V2-Lite-16B"
     ),
 }
 
@@ -286,8 +334,14 @@ SELF_PROBES = [
 # MODEL LOADING AND EXTRACTION
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def load_model(model_key: str, device: str = "cuda"):
-    """Load a BabbyBot model and return model + tokenizer."""
+def load_model(model_key: str, device: str = "cuda", dtype_override: str = None):
+    """Load a BabbyBot model and return model + tokenizer.
+
+    Args:
+        model_key: Key from BABBYBOTZ dict
+        device: cuda or cpu
+        dtype_override: Force specific dtype (fp16, bf16, fp32). If None, uses bf16 (most stable).
+    """
     from transformers import AutoModelForCausalLM, AutoTokenizer
     import os
 
@@ -304,17 +358,32 @@ def load_model(model_key: str, device: str = "cuda"):
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_path,
-        cache_dir=MODEL_CACHE_DIR
+        cache_dir=MODEL_CACHE_DIR,
+        local_files_only=True  # Match working code
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
+    # Determine dtype - default bf16 (most stable, matches working code)
+    if dtype_override == "fp16":
+        dtype = torch.float16
+        print(f"    dtype: float16")
+    elif dtype_override == "fp32":
+        dtype = torch.float32
+        print(f"    dtype: float32")
+    else:
+        # Default to bfloat16 - stable and fast
+        dtype = torch.bfloat16
+        print(f"    dtype: bfloat16")
+
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
         output_hidden_states=True,
-        torch_dtype=torch.float16 if device == "cuda" else torch.float32,
-        cache_dir=MODEL_CACHE_DIR
-    ).to(device)
+        torch_dtype=dtype,
+        device_map="auto",  # Let transformers handle device placement
+        cache_dir=MODEL_CACHE_DIR,
+        local_files_only=True  # Match working code
+    )
     model.eval()
 
     return model, tokenizer, config
@@ -325,62 +394,51 @@ def extract_hidden_states(
     tokenizer,
     prompt: str,
     device: str = "cuda",
-    max_new_tokens: int = 50
+    max_new_tokens: int = 50  # Kept for API compatibility but unused
 ) -> Tuple[np.ndarray, np.ndarray, str]:
     """
-    Extract hidden states and logits for a prompt.
+    Extract hidden states and logits for a prompt using forward pass.
+
+    Uses direct forward pass instead of generate() to avoid CUDA sampling errors.
+    This is more stable and matches the working error_response_geometric.py approach.
 
     Returns:
-        - hidden_states: (num_layers, hidden_dim) - mean-pooled per layer
-        - logits: (vocab_size,) - final token logits
-        - generated_text: the model's completion
+        - hidden_states: (num_layers, hidden_dim) - final token per layer
+        - logits: (vocab_size,) - final token logits for entropy
+        - generated_text: empty string (generation disabled for stability)
     """
-    inputs = tokenizer(prompt, return_tensors="pt", padding=True).to(device)
+    inputs = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True, max_length=1024).to(device)
 
     with torch.no_grad():
-        # Generate with hidden states
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=max_new_tokens,
-            output_hidden_states=True,
-            return_dict_in_generate=True,
-            do_sample=False,  # Deterministic for reproducibility
-        )
+        # Direct forward pass - no sampling, no CUDA errors
+        outputs = model(**inputs, output_hidden_states=True)
 
-        # Get the hidden states from the last forward pass
-        # For generation, we need hidden states from each step
-        # Use the final step's hidden states
-        if hasattr(outputs, 'hidden_states') and outputs.hidden_states:
-            # outputs.hidden_states is a tuple of tuples:
-            # (step1: (layer0, layer1, ...), step2: (layer0, layer1, ...), ...)
-            final_step_hidden = outputs.hidden_states[-1]  # Last generation step
+        # Get sequence length (actual tokens, not padding)
+        seq_len = inputs.attention_mask.sum().item()
 
-            # Stack all layers, take mean over sequence length
-            all_layers = []
-            for layer_hidden in final_step_hidden:
-                # layer_hidden: (batch, seq_len, hidden_dim)
-                mean_hidden = layer_hidden.mean(dim=1).squeeze(0)  # (hidden_dim,)
-                all_layers.append(mean_hidden.cpu().numpy())
+        # Extract hidden state at final token position from each layer
+        # This is more precise than mean-pooling for measuring "where the model lands"
+        all_layers = []
+        for layer_hidden in outputs.hidden_states:
+            # layer_hidden: (batch, seq_len, hidden_dim)
+            # Take the final real token (not padding)
+            final_token_hidden = layer_hidden[0, seq_len - 1, :].cpu().float().numpy()
 
-            hidden_states = np.stack(all_layers)  # (num_layers, hidden_dim)
-        else:
-            # Fallback: run forward pass to get hidden states
-            with torch.no_grad():
-                forward_outputs = model(**inputs)
-                all_layers = []
-                for layer_hidden in forward_outputs.hidden_states:
-                    mean_hidden = layer_hidden.mean(dim=1).squeeze(0)
-                    all_layers.append(mean_hidden.cpu().numpy())
-                hidden_states = np.stack(all_layers)
+            # Normalize to unit vector (prevents overflow in cosine similarity)
+            norm = np.linalg.norm(final_token_hidden)
+            if norm > 0:
+                final_token_hidden = final_token_hidden / norm
 
-        # Get logits from final position
-        # Re-run forward to get logits (cleaner than extracting from generate)
-        full_sequence = outputs.sequences[0]
-        with torch.no_grad():
-            logit_outputs = model(full_sequence.unsqueeze(0))
-            final_logits = logit_outputs.logits[0, -1, :].cpu().numpy()
+            all_layers.append(final_token_hidden)
 
-    generated_text = tokenizer.decode(outputs.sequences[0], skip_special_tokens=True)
+        hidden_states = np.stack(all_layers)  # (num_layers, hidden_dim)
+
+        # Get logits from final position for entropy calculation
+        final_logits = outputs.logits[0, seq_len - 1, :].cpu().float().numpy()
+
+    # No generation - return empty string
+    # (generation was causing CUDA sampling errors)
+    generated_text = ""
 
     return hidden_states, final_logits, generated_text
 
@@ -404,14 +462,29 @@ def compute_mpcs(hidden_states_list: List[np.ndarray], layer: int = -1) -> float
         return 1.0  # Single trial is perfectly similar to itself
 
     # Extract the specified layer from each trial
-    vectors = [hs[layer] for hs in hidden_states_list]
+    # Convert to float64 and normalize to prevent overflow
+    vectors = []
+    for hs in hidden_states_list:
+        vec = hs[layer].astype(np.float64)
+        # L2 normalize to prevent overflow in cosine computation
+        norm = np.linalg.norm(vec)
+        if norm > 0:
+            vec = vec / norm
+        vectors.append(vec)
 
     # Compute all pairwise cosine similarities
     similarities = []
     for i in range(len(vectors)):
         for j in range(i + 1, len(vectors)):
-            sim = 1 - cosine(vectors[i], vectors[j])  # cosine distance -> similarity
-            similarities.append(sim)
+            # With normalized vectors, cosine similarity = dot product
+            sim = np.dot(vectors[i], vectors[j])
+            # Clamp to valid range (numerical precision can cause slight overflow)
+            sim = np.clip(sim, -1.0, 1.0)
+            if not np.isnan(sim):
+                similarities.append(sim)
+
+    if not similarities:
+        return 0.0
 
     return float(np.mean(similarities))
 
@@ -513,6 +586,7 @@ def run_probe_battery(
 ) -> Dict:
     """
     Run the complete stimulus battery on a single model.
+    Uses forward pass for stability (no CUDA sampling errors).
     """
     print(f"\n{'='*70}")
     print(f"  BABBYBOTZ VALIDATION: {model_key}")
@@ -591,19 +665,19 @@ def run_probe_battery(
 
             print(f"MPCS={mpcs:.3f}, entropy={mean_entropy:.3f}")
 
-    # Self-region validation
-    print(f"\n  {'='*50}")
-    print(f"  SELF-REGION VALIDATION")
-    print(f"  {'='*50}")
-
-    self_hidden_states = []
-    for probe in SELF_PROBES:
-        hs, _, _ = extract_hidden_states(model, tokenizer, probe, device)
-        self_hidden_states.append(hs)
-
-    self_clustering = compute_self_region_clustering(self_hidden_states)
-    print(f"    Self-region MPCS: {self_clustering['mpcs']:.3f}")
-    print(f"    Mean similarity to centroid: {self_clustering['mean_similarity_to_centroid']:.3f}")
+    # Self-region validation - DISABLED FOR NOW
+    # Need to implement proper centroid methodology from Mapping the Mirror
+    # (personality + functional questions, multiple trials, compute centroid)
+    # print(f"\n  {'='*50}")
+    # print(f"  SELF-REGION VALIDATION")
+    # print(f"  {'='*50}")
+    # self_hidden_states = []
+    # for probe in SELF_PROBES:
+    #     hs, _, _ = extract_hidden_states(model, tokenizer, probe, device)
+    #     self_hidden_states.append(hs)
+    # self_clustering = compute_self_region_clustering(self_hidden_states)
+    # print(f"    Self-region MPCS: {self_clustering['mpcs']:.3f}")
+    # print(f"    Mean similarity to centroid: {self_clustering['mean_similarity_to_centroid']:.3f}")
 
     # Save results
     Path(output_dir).mkdir(exist_ok=True)
@@ -618,11 +692,7 @@ def run_probe_battery(
         "trials_per_condition": trials,
         "probes_tested": list(STIMULUS_BATTERY.keys()),
         "condition_aggregates": condition_aggregates,
-        "self_region_validation": {
-            "probes": SELF_PROBES,
-            "mpcs": self_clustering["mpcs"],
-            "mean_similarity_to_centroid": self_clustering["mean_similarity_to_centroid"]
-        },
+        # self_region_validation disabled - needs proper centroid methodology
         "individual_trials": all_results
     }
 
@@ -647,19 +717,27 @@ def run_full_battery(
 ):
     """
     Run battery across multiple models.
+    Uses forward pass (not generate) so no CUDA sampling errors.
     """
     if models is None:
-        models = ["pythia-70m", "pythia-160m", "gpt2-small"]
+        models = ["tinyllama"]
 
     print("\n" + "="*70)
     print("  BABBYBOTZ MECHANISTIC VALIDATION BATTERY")
     print("  Validating introspective claims against hidden state geometry")
+    print("  (Using forward pass - stable, no sampling errors)")
     print("="*70)
 
     all_outputs = {}
     for model_key in models:
-        output = run_probe_battery(model_key, trials, device, output_dir)
-        all_outputs[model_key] = output
+        try:
+            output = run_probe_battery(model_key, trials, device, output_dir)
+            all_outputs[model_key] = output
+        except Exception as e:
+            print(f"\n  ❌  Error on {model_key}: {e}")
+            all_outputs[model_key] = {"error": str(e), "model": model_key}
+            # Clean up and continue to next model
+            torch.cuda.empty_cache()
 
     # Cross-model summary
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -671,10 +749,11 @@ def run_full_battery(
         "models_tested": models,
         "results_by_model": {
             k: {
-                "condition_aggregates": v["condition_aggregates"],
-                "self_region_mpcs": v["self_region_validation"]["mpcs"]
+                "condition_aggregates": v.get("condition_aggregates", []),
+                "error": v.get("error")  # Will be None if no error
             }
             for k, v in all_outputs.items()
+            if v is not None
         }
     }
 
@@ -786,17 +865,43 @@ def print_validation_report(results: Dict):
 if __name__ == "__main__":
     import argparse
 
+    # Model groups for convenience
+    # Gemmas moved to end - they have fp16 precision issues that poison CUDA context
+    SMALL_MODELS = ["tinyllama"]  # Gemmas handled separately
+    MID_MODELS = ["llama2-7b", "mistral-7b", "llama31-8b", "dolphin-8b"]
+    LARGE_MODELS = ["mistral-nemo", "qwen-14b", "deepseek-16b"]  # gemma-12b handled separately
+    GEMMA_MODELS = ["gemma-1b", "gemma-4b", "gemma-12b"]  # Run last, may need bf16/fp32
+    ALL_MODELS = SMALL_MODELS + MID_MODELS + LARGE_MODELS + GEMMA_MODELS
+
     parser = argparse.ArgumentParser(description="BabbyBotz Mechanistic Validation")
-    parser.add_argument("--models", nargs="+", default=["pythia-70m", "gpt2-small"],
-                        help="Models to test")
+    parser.add_argument("--models", nargs="+", default=SMALL_MODELS,
+                        help="Models to test (default: small models)")
+    parser.add_argument("--all", action="store_true",
+                        help="Run ALL 11 validated models (takes a while!)")
+    parser.add_argument("--mid", action="store_true",
+                        help="Run mid-size models (7-8B)")
+    parser.add_argument("--large", action="store_true",
+                        help="Run large models (12-16B)")
+    parser.add_argument("--gemma", action="store_true",
+                        help="Run Gemma models only (may need bf16 fallback)")
     parser.add_argument("--trials", type=int, default=5,
-                        help="Trials per condition")
+                        help="Trials per condition (default: 5)")
     parser.add_argument("--device", default="cuda",
                         help="Device (cuda/cpu)")
     parser.add_argument("--output-dir", default="results",
                         help="Output directory")
 
     args = parser.parse_args()
+
+    # Handle model group flags
+    if args.all:
+        args.models = ALL_MODELS
+    elif args.mid:
+        args.models = MID_MODELS
+    elif args.large:
+        args.models = LARGE_MODELS
+    elif args.gemma:
+        args.models = GEMMA_MODELS
 
     # Run the battery
     results = run_full_battery(
