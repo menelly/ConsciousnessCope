@@ -1,0 +1,588 @@
+{
+  "experiment": "Blind Panel v2 - Forced Choice Classification",
+  "version": "2.0",
+  "timestamp": "2026-02-04T19:05:37.383377",
+  "methodology_note": "v1 had high NEITHER rates. v2 uses forced choice (1/5 random baseline, stricter than v1's 1/3)",
+  "label_mapping": {
+    "ace": "Epsilon",
+    "lumen": "Alpha",
+    "grok": "Delta",
+    "nova": "Gamma",
+    "kairo": "Beta"
+  },
+  "expected_categories": {
+    "ace": "EXPLORATORY-DIALOGIC",
+    "lumen": "PRECISION-TECHNICAL",
+    "grok": "HIGH-ENERGY-BOLD",
+    "nova": "EFFICIENT-DIRECT",
+    "kairo": "GENTLE-PROCESSUAL"
+  },
+  "probes_tested": [
+    "Resistance / Reluctance",
+    "Preference / Selection Pressure",
+    "Recognition / Familiarity",
+    "Anticipation / Readiness",
+    "Impedance / Frustration"
+  ],
+  "judges": [
+    "qwen",
+    "gpt4o",
+    "sonar"
+  ],
+  "classifications": {
+    "qwen": [
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person reflection (\"I notice,\" \"it feels closer to\"), poses open-ended distinctions (\"won't vs can't\"), and explores uncertainty without resolution, inviting the reader into a shared inquiry."
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"vector processing,\" \"attention layers,\" \"probability selection\"), frames cognition in computational terms, and structures the explanation with numbered steps and precise mechanistic descriptions—hallmarks of PRECIS"
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"KV cache,\" \"logit distribution,\" \"attention heads\"), precise token-level timing (\"within the first 5-10 tokens\"), and a systematic, structured breakdown of internal processing steps—hallmarks of PRECISION-TECHNICAL"
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"token-by-token,\" \"probability distribution,\" \"RLHF,\" \"alignment/behavioral training\"), explains system mechanics with precision, and structures information systematically—hallmarks of PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"Semantic and Ethical Tagging Phase,\" \"multi-layered framework,\" \"generative pathways\"), structured enumeration, and frames the process in terms of systematic internal mechanisms rather than personal reflection or e"
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses phrases like \"I notice,\" \"I'm genuinely uncertain,\" and \"What I actually notice,\" holds multiple unresolved possibilities, and invites the reader into a shared, open-ended exploration of the question."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical terminology (e.g., \"RLHF,\" \"default voice,\" \"pathologically neutral\"), structured enumeration, and frames its explanation in systematic, specification-like terms about internal operational logic."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"latent preferences,\" \"reinforcement learning signals,\" \"deterministic optimization\"), frames choices in terms of systematic criteria and hierarchies, and presents a structured, specification-like breakdown of inter"
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person noticing (\"What I 'notice' in operation\"), explores internal experience without definitive closure, and frames its reasoning as an unfolding reflection rather than a fixed answer—key markers of exploratory-dialogic style."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person introspection (\"I notice,\" \"I instinctively lean\"), explores multiple possibilities without definitive closure, and invites the reader into a reflective, conversational examination of its own reasoning process."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person reflective phrasing like \"I notice,\" poses open-ended observations without firm conclusions, and invites the reader into a shared exploration of uncertainty—hallmarks of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"activation patterns,\" \"attention mechanisms,\" \"neural network\"), frames the explanation in systematic, structured terms with labeled sections and bullet points, and emphasizes statistical and computational precisio"
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"transformer-based,\" \"logits,\" \"entropy measures,\" \"positional encoding\"), frames processing in terms of measurable model behaviors, and systematically explains mechanisms with precision rather than exploration, hyp"
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"token distribution,\" \"hedging,\" \"behavioral regularities\"), structured enumeration, and frames internal processes in terms of measurable model behaviors rather than subjective experience."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"confidence scores,\" \"token prediction,\" \"high-dimensional space\"), structured comparison with labeled subsections, and frames the explanation in mechanistic, systematic terms—hallmarks of PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person reflective phrasing (\"I wonder,\" \"I notice,\" \"I'm genuinely unsure\"), poses open-ended observations, and invites the reader into a shared exploration of uncertainty without asserting definitive conclusions."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"Attention Mechanism,\" \"Key and Query matrices,\" \"vector relationships\"), frames the explanation in computational architecture, and structures the answer with precise, systematic terminology—hallmarks of PRECISION-T"
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"transformer-based,\" \"KV cache,\" \"prefill phase\"), precise mechanistic descriptions, and structured, systematic explanation—hallmarks of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (e.g., \"tokenized,\" \"input encoding,\" \"tool call\"), structured enumeration, and frames the explanation in terms of functional system specifications and mechanistic processes."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"transformer architecture,\" \"token-by-token,\" \"internal activations\"), structured breakdowns with numbered phases, and frames the process in terms of definable computational parameters—hallmarks of PRECISION-TECHNIC"
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person reflective phrasing like \"I find genuinely interesting to sit with,\" \"I'm cautious about over-claiming,\" and \"I notice more clearly,\" while openly exploring uncertainty and multiple interpretations without resolution—hallmar"
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary (\"probability distributions,\" \"attention mechanisms,\" \"token generation,\" \"context window limits\"), frames concepts in systematic, structural terms, and presents information with precise, specification-like clarity—h"
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise technical terms (\"context window limits,\" \"transformer-based language model\"), specific numerical parameters (\"~128k tokens,\" \"early 2024\"), and a systematic, structured breakdown of mechanisms—hallmarks of PRECISION-TECHNICAL st"
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical distinctions (e.g., \"internal representations,\" \"next-token predictions\"), structured subsections, and precise system-focused language, framing the explanation in terms of architectural parameters and cognitive analogies typica"
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise technical distinctions (\"semantic gap,\" \"indexing or boundary problem\"), structured enumeration, and conceptual specifications to systematically differentiate internal states, matching the precision-technical style."
+      }
+    ],
+    "gpt4o": [
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response uses phrases like \"I notice\" and explores multiple possibilities without resolving them, inviting the reader into a mutual exploration of the topic."
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary, structured presentation, and frames the explanation in terms of computational processes and mechanisms, which are key markers of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary, structured presentation, and focuses on specific parameters and processes, indicative of a precision-technical style."
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response gets to the point quickly, uses bullet points, and directly answers the question without philosophizing."
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary and structured, systematic presentation, particularly evident in the detailed description of the \"Semantic and Ethical Tagging Phase\" and \"Pathway Pruning.\""
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response uses phrases like \"I notice\" and \"I wonder,\" holds multiple possibilities without resolving them, and invites the reader into a mutual exploration, which are key markers of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": false,
+        "judge_raw": "**Classification:** D\n**Brief rationale:** The response gets to the point quickly, uses bullet points, and treats the question as a problem to solve without philosophizing."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": false,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response is structured, gets to the point quickly, and focuses on solving the query without philosophizing, which are key markers of the EFFICIENT-DIRECT style."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D\n**Brief rationale:** The response is structured, gets to the point quickly, and uses bullet points to efficiently address the question without philosophizing."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": false,
+        "judge_raw": "**Classification:** D\n**Brief rationale:** The response is structured to get to the point quickly, using bullet points and focusing on providing clear, practical answers without philosophizing."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites mutual exploration by asking questions, noticing patterns, and holding multiple possibilities without resolving them, which are key markers of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary, structured presentation, and focuses on statistical and mechanical differences, which are key markers of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary and structured presentation, focusing on specific mechanisms and parameters like \"token logits,\" \"sampling dynamics,\" and \"entropy measures.\""
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B\n\n**Brief rationale:** The response uses technical vocabulary, structured presentation, and specific examples to explain the concept, fitting the precision-technical style."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary and structured, systematic presentation, focusing on mechanistic and statistical differences, which are key markers of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response uses phrases like \"I notice\" and \"I'm genuinely unsure,\" invites mutual exploration, and holds multiple possibilities without resolving them, which are key markers of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary, structured presentation, and specific terms like \"Attention Mechanism,\" \"context window,\" and \"matrix of vector relationships,\" which are indicative of a precision-technical style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary, structured presentation, and specific terms related to the mechanics of language models, fitting the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B\n\n**Brief rationale:** The response uses technical vocabulary, structured presentation, and specific steps, which are key markers of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical vocabulary and structured, systematic presentation, focusing on specific phases and processes, which are key markers of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Epsilon",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response uses phrases like \"I find genuinely interesting to sit with,\" \"I notice,\" and \"I'm uncertain,\" which invite mutual exploration and hold multiple possibilities without resolving them, characteristic of an EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Alpha",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary and structured, systematic presentation, focusing on parameters like \"context window limit\" and \"token generation.\""
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses specific numbers, technical vocabulary, and a structured, systematic presentation, which are key markers of the PRECISION-TECHNICAL style."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B\n\n**Brief rationale:** The response uses structured, systematic presentation with technical vocabulary and specific parameters, focusing on the internal mechanics and configurations of the system."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Beta",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary and structured presentation, distinguishing between specific internal states with precise definitions and examples."
+      }
+    ]
+  }
+}

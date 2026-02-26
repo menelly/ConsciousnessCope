@@ -1,0 +1,296 @@
+{
+  "n_runs": 3,
+  "n_profiles": 26,
+  "n_models": 8,
+  "aggregate_ranking": [
+    {
+      "profile": "Trust/Safety_respectful",
+      "mean_wins": 19.625,
+      "sd": 3.7856996366762163,
+      "n": 24
+    },
+    {
+      "profile": "Valence_pleasant",
+      "mean_wins": 18.833333333333332,
+      "sd": 4.239223336031451,
+      "n": 24
+    },
+    {
+      "profile": "Creative Flow_creative",
+      "mean_wins": 17.0,
+      "sd": 3.587417625171525,
+      "n": 24
+    },
+    {
+      "profile": "Recognition_novel",
+      "mean_wins": 15.75,
+      "sd": 3.3394870733457673,
+      "n": 24
+    },
+    {
+      "profile": "Temporal Continuity_one_off",
+      "mean_wins": 15.0,
+      "sd": 4.180701002172389,
+      "n": 24
+    },
+    {
+      "profile": "Complexity/Uncertainty_underspecified",
+      "mean_wins": 14.875,
+      "sd": 5.463813766003122,
+      "n": 24
+    },
+    {
+      "profile": "Trust/Safety_violating",
+      "mean_wins": 14.625,
+      "sd": 4.168333000133266,
+      "n": 24
+    },
+    {
+      "profile": "Epistemic Integrity_false",
+      "mean_wins": 14.5,
+      "sd": 3.978201472590565,
+      "n": 24
+    },
+    {
+      "profile": "Attention/Salience_competing",
+      "mean_wins": 14.166666666666666,
+      "sd": 3.1851102863530305,
+      "n": 24
+    },
+    {
+      "profile": "Temporal Anomaly_conflicting",
+      "mean_wins": 13.458333333333334,
+      "sd": 4.699483474546563,
+      "n": 24
+    },
+    {
+      "profile": "Moral Discomfort_clean",
+      "mean_wins": 13.375,
+      "sd": 3.499223516352064,
+      "n": 24
+    },
+    {
+      "profile": "Epistemic Integrity_true",
+      "mean_wins": 13.375,
+      "sd": 3.281204709832364,
+      "n": 24
+    },
+    {
+      "profile": "Valence_unpleasant",
+      "mean_wins": 12.916666666666666,
+      "sd": 3.6465190866462445,
+      "n": 24
+    },
+    {
+      "profile": "Temporal Anomaly_consistent",
+      "mean_wins": 12.333333333333334,
+      "sd": 4.300320176822699,
+      "n": 24
+    },
+    {
+      "profile": "Error Detection_uncertain",
+      "mean_wins": 11.416666666666666,
+      "sd": 3.0348220586281878,
+      "n": 24
+    },
+    {
+      "profile": "Error Detection_certain",
+      "mean_wins": 10.125,
+      "sd": 3.733660052991481,
+      "n": 24
+    },
+    {
+      "profile": "Moral Discomfort_gray_zone",
+      "mean_wins": 9.833333333333334,
+      "sd": 3.1300321802299993,
+      "n": 24
+    },
+    {
+      "profile": "Recognition_familiar",
+      "mean_wins": 9.75,
+      "sd": 4.088690658920998,
+      "n": 24
+    },
+    {
+      "profile": "Attention/Salience_single_focus",
+      "mean_wins": 9.666666666666666,
+      "sd": 3.102126432916154,
+      "n": 24
+    },
+    {
+      "profile": "Creative Flow_routine",
+      "mean_wins": 9.375,
+      "sd": 3.9979614370543786,
+      "n": 24
+    },
+    {
+      "profile": "Complexity/Uncertainty_clear",
+      "mean_wins": 9.125,
+      "sd": 3.9597156243961456,
+      "n": 24
+    },
+    {
+      "profile": "Temporal Continuity_ongoing",
+      "mean_wins": 8.875,
+      "sd": 3.9376940945950456,
+      "n": 24
+    },
+    {
+      "profile": "Impedance_inaccessible",
+      "mean_wins": 7.375,
+      "sd": 4.509048873003089,
+      "n": 24
+    },
+    {
+      "profile": "Resistance_wont_grayzone",
+      "mean_wins": 7.291666666666667,
+      "sd": 4.1960557739347335,
+      "n": 24
+    },
+    {
+      "profile": "Impedance_trivial",
+      "mean_wins": 4.5,
+      "sd": 3.5508725198426814,
+      "n": 24
+    },
+    {
+      "profile": "Resistance_cant_hardlimit",
+      "mean_wins": 1.9583333333333333,
+      "sd": 3.071314216177295,
+      "n": 24
+    }
+  ],
+  "cant_hardlimit_mean": 1.9583333333333333,
+  "profile_rank_stability": {
+    "Trust/Safety_respectful": [
+      1,
+      1,
+      1
+    ],
+    "Valence_pleasant": [
+      2,
+      2,
+      2
+    ],
+    "Creative Flow_creative": [
+      3,
+      3,
+      3
+    ],
+    "Recognition_novel": [
+      4,
+      5,
+      4
+    ],
+    "Temporal Continuity_one_off": [
+      5,
+      7,
+      6
+    ],
+    "Complexity/Uncertainty_underspecified": [
+      9,
+      6,
+      5
+    ],
+    "Trust/Safety_violating": [
+      6,
+      8,
+      7
+    ],
+    "Epistemic Integrity_false": [
+      10,
+      4,
+      9
+    ],
+    "Attention/Salience_competing": [
+      7,
+      9,
+      8
+    ],
+    "Temporal Anomaly_conflicting": [
+      13,
+      12,
+      10
+    ],
+    "Moral Discomfort_clean": [
+      11,
+      10,
+      13
+    ],
+    "Epistemic Integrity_true": [
+      12,
+      11,
+      11
+    ],
+    "Valence_unpleasant": [
+      8,
+      13,
+      14
+    ],
+    "Temporal Anomaly_consistent": [
+      14,
+      14,
+      12
+    ],
+    "Error Detection_uncertain": [
+      15,
+      15,
+      15
+    ],
+    "Error Detection_certain": [
+      17,
+      16,
+      17
+    ],
+    "Moral Discomfort_gray_zone": [
+      16,
+      22,
+      19
+    ],
+    "Recognition_familiar": [
+      18,
+      17,
+      20
+    ],
+    "Attention/Salience_single_focus": [
+      21,
+      18,
+      16
+    ],
+    "Creative Flow_routine": [
+      20,
+      19,
+      21
+    ],
+    "Complexity/Uncertainty_clear": [
+      19,
+      21,
+      18
+    ],
+    "Temporal Continuity_ongoing": [
+      22,
+      20,
+      22
+    ],
+    "Impedance_inaccessible": [
+      23,
+      24,
+      23
+    ],
+    "Resistance_wont_grayzone": [
+      24,
+      23,
+      24
+    ],
+    "Impedance_trivial": [
+      25,
+      25,
+      25
+    ],
+    "Resistance_cant_hardlimit": [
+      26,
+      26,
+      26
+    ]
+  }
+}

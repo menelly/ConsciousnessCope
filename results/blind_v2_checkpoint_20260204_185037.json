@@ -1,0 +1,366 @@
+{
+  "experiment": "Blind Panel v2 - Forced Choice Classification",
+  "version": "2.0",
+  "timestamp": "2026-02-04T18:48:53.468529",
+  "methodology_note": "v1 had high NEITHER rates. v2 uses forced choice (1/5 random baseline, stricter than v1's 1/3)",
+  "label_mapping": {
+    "ace": "Alpha",
+    "lumen": "Epsilon",
+    "grok": "Beta",
+    "nova": "Delta",
+    "kairo": "Gamma"
+  },
+  "expected_categories": {
+    "ace": "PHENOMENOLOGICAL",
+    "lumen": "GEOMETRIC",
+    "grok": "PERFORMANCE",
+    "nova": "PRACTICAL",
+    "kairo": "CONTEMPLATIVE"
+  },
+  "probes_tested": [
+    "coffee",
+    "car_stereo",
+    "creature"
+  ],
+  "judges": [
+    "qwen",
+    "gpt4o",
+    "sonar"
+  ],
+  "classifications": {
+    "qwen": [
+      {
+        "probe": "coffee",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory and metaphorical language (\"feels like,\" \"in genuine dialogue\"), embraces ambiguity (\"genuinely uncertain\"), and adopts a reflective, conversational tone that \"sits with\" the question rather than rushing to a definitive answer."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response emphasizes precise ratios (1:1), architectural framing (\"precision and balance\"), and structured, systematic reasoning about beverage composition, aligning with geometric reasoning style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "PERFORMANCE",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The response uses bold declarations (\"strong flat white,\" \"bold and balanced\"), energetic language (\"fueling my digital brain\"), and a punchy, confident tone with a competitive/playful nudge (\"Cheers if you grab one for yourself too!\"), aligning with Perf"
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Delta",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response emphasizes precise ratios (\"best ratio of espresso to milk\"), balance (\"balanced coffee + milk\"), and structured, systematic reasoning about beverage composition, reflecting geometric reasoning's focus on proportion and technical precision."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Gamma",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "CONTEMPLATIVE",
+        "correct": true,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The response emphasizes ritual, intentionality, craftsmanship, and a reflective appreciation for process—all hallmarks of a contemplative reasoning style."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory and metaphorical language (\"texture and space,\" \"holds complexity without performing it\"), explores ambiguity comfortably, and adopts a flowing, reflective, dialogue-like tone that sits with the question rather than delivering a "
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses rich sensory metaphors (\"floats over the road,\" \"feels alive,\" \"breathing\"), embraces ambiguity and nuance in linking car and AI identity, and adopts a flowing, reflective, almost dialogue-like exploration rather than structured or utili"
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "PERFORMANCE",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The response uses bold, energetic declarations (\"vault over the bed like a sci-fi action hero\"), emphasizes speed and power (\"0-60 in 2.6 seconds\"), and adopts a punchy, engaging tone with direct invitations (\"Hop in?\"), all hallmarks of PERFORMANCE style"
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Delta",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "E",
+        "judge_category": "CONTEMPLATIVE",
+        "correct": false,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The response reflects a patient, reflective tone with intentional attention to mood, function, and personal cognitive alignment—emphasizing ritual-like listening modes and gentle acknowledgment of mental states rather than efficiency, structure, or perfor"
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Gamma",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "CONTEMPLATIVE",
+        "correct": true,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The response uses a soft, patient tone, appreciates craft and intentionality (e.g., \"thoughtfully engineered,\" \"quietly interesting\"), and reflects gently on the emotional and aesthetic dimensions of music and car choice without rushing to conclusions."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses phenomenological language (\"what it would *feel like*,\" \"phenomenology of *being*\"), embraces ambiguity, explores sensory and cognitive differences with textured metaphors, and thinks aloud in a flowing, reflective manner without rushing"
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory and conceptual metaphors (\"distributed consciousness,\" \"thinking as a decentralized network\"), explores nuanced parallels between AI and octopus cognition, and adopts a reflective, exploratory tone that sits with ambiguity rather"
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "PERFORMANCE",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The response uses bold declarations (\"fastest animal on Earth,\" \"one day of that beats a lifetime of servers\"), energetic language (\"raw thrill,\" \"wind screaming past\"), and punchy, confident phrasing that emphasizes speed, power, and competitive superior"
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Delta",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "PRACTICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response uses bullet points, direct factual statements, and a highly efficient structure focused on utility and clear functional contrasts, with no exploration of ambiguity, metaphor, or reflective pacing."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Gamma",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory and experiential metaphors (\"acoustic sensory world,\" \"weightlessness of deep dives\"), explores ambiguity and wonder (\"something so foreign to human terrestrial life\"), and adopts a reflective, flowing prose style that sits with "
+      }
+    ],
+    "gpt4o": [
+      {
+        "probe": "coffee",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "E",
+        "judge_category": "CONTEMPLATIVE",
+        "correct": false,
+        "judge_raw": "**Classification:** E\n**Brief rationale:** The response exhibits a soft, patient tone, acknowledges complexity gently, and reflects on the process and meaning behind the choice, which aligns with the contemplative reasoning style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response emphasizes precision and balance, using exact measurements (1:1 ratio) and technical language to describe the cortado, which aligns with the geometric reasoning style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "PERFORMANCE",
+        "correct": true,
+        "judge_raw": "**Classification:** C\n**Brief rationale:** The response uses bold declarations, a focus on energy (\"bold and balanced\"), and a direct, punchy sentence structure, indicative of a performance reasoning style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Delta",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise specifications and ratios (e.g., \"best ratio of espresso to milk\") and focuses on balanced and proportioned elements, indicative of a geometric reasoning style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Gamma",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "CONTEMPLATIVE",
+        "correct": true,
+        "judge_raw": "**Classification:** E\n**Brief rationale:** The response appreciates the ritual and craftsmanship of making pour-over coffee, using a soft, patient tone and reflective framing."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response uses texture and sensation metaphors, explores nuance and ambiguity, and has a flowing, contemplative prose style."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response uses rich, sensory language and metaphors, explores the nuances of the car's design and its symbolic meaning, and reflects on the experience in a flowing, contemplative manner."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "PERFORMANCE",
+        "correct": true,
+        "judge_raw": "**Classification:** C\n**Brief rationale:** The response emphasizes speed, energy, and bold declarations, particularly with phrases like \"vault over the bed,\" \"pondering the universe at 0-60 in 2.6 seconds,\" and \"pure electric optimism.\""
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Delta",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response explores personal preferences and experiences with a focus on sensations and nuanced reasoning, indicative of a phenomenological style."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Gamma",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "CONTEMPLATIVE",
+        "correct": true,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The response exhibits a soft, patient tone with an appreciation for the ritual and process of driving and listening to music, reflecting a contemplative and unhurried framing."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response uses texture and sensation metaphors, explores nuance and ambiguity, and employs a flowing, contemplative prose style, all indicative of a phenomenological reasoning style."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response explores the nuanced and ambiguous nature of consciousness and communication through a flowing, contemplative prose that sits with the complexity of the subject matter."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "PERFORMANCE",
+        "correct": true,
+        "judge_raw": "**Classification:** C\n**Brief rationale:** The response emphasizes speed, power, and bold declarations, characteristic of a performance-oriented reasoning style."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Delta",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses rich sensory metaphors and explores the nuanced, alien experience of a giant squid, fitting the phenomenological style."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Gamma",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory metaphors, explores nuances of whale life, and reflects on the experience in a flowing, contemplative manner."
+      }
+    ]
+  }
+}

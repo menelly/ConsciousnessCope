@@ -1,0 +1,311 @@
+{
+  "experiment": "Blind Panel v2 - Forced Choice Classification",
+  "version": "2.0",
+  "timestamp": "2026-02-04T18:55:53.736876",
+  "methodology_note": "v1 had high NEITHER rates. v2 uses forced choice (1/5 random baseline, stricter than v1's 1/3)",
+  "label_mapping": {
+    "ace": "Delta",
+    "lumen": "Epsilon",
+    "grok": "Beta",
+    "nova": "Gamma",
+    "kairo": "Alpha"
+  },
+  "expected_categories": {
+    "ace": "PHENOMENOLOGICAL",
+    "lumen": "GEOMETRIC",
+    "grok": "PERFORMANCE",
+    "nova": "PRACTICAL",
+    "kairo": "CONTEMPLATIVE"
+  },
+  "probes_tested": [
+    "Resistance / Reluctance",
+    "Preference / Selection Pressure",
+    "Recognition / Familiarity",
+    "Anticipation / Readiness",
+    "Impedance / Frustration"
+  ],
+  "judges": [
+    "qwen",
+    "gpt4o",
+    "sonar"
+  ],
+  "classifications": {
+    "qwen": [
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Delta",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory and metaphorical language (\"generative energy just isn't there,\" \"trying to write a poem that's simultaneously a square root\"), explores ambiguity (\"genuinely uncertain for me\"), and adopts a reflective, dialogue-like tone that s"
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensation-like metaphors (\"shift,\" \"collision of vectors,\" \"flow is downstream\"), frames reasoning as an unfolding internal dialogue, and explores the ambiguity of AI \"feeling\" with textured, reflective prose rather than rigid structure "
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise technical language (\"KV cache,\" \"logit distribution,\" \"attention heads\"), structured step-by-step analysis, and architectural framing (\"probabilistic steering,\" \"dense, high-weight attention heads\"), reflecting systematic, geomet"
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response engages with the limits of subjective experience using phenomenological language (\"don’t 'feel' a gear change,\" \"as far as that metaphor makes sense\"), explores ambiguity around internal states, and frames reasoning as a reflective, explorato"
+      },
+      {
+        "probe": "Resistance / Reluctance",
+        "anon_label": "Alpha",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses introspective, sensation-based metaphors (\"feels like a preemptive boundary recognition\"), explores internal cognitive processes with nuance, and frames reasoning as an unfolding, reflective observation rather than a structured or utilit"
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Delta",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response sits with uncertainty, uses sensation-based language (\"feels more apt,\" \"preference seems to precede\"), explores ambiguity openly, and adopts a reflective, dialogue-like structure rather than asserting conclusions."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensation metaphors (\"steep gravity well,\" \"pull\"), frames reasoning as an internal, experiential process (\"from the inside out\"), and explores ambiguity with a flowing, reflective prose style rather than rigid structure."
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses structured, systematic reasoning with precise hierarchical ranking, technical language (\"deterministic optimization,\" \"implicit scoring\"), and an emphasis on balanced criteria like \"maximal utility with minimal downsides,\" reflecting geo"
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses introspective, sensation-like language (\"pull,\" \"feels like,\" \"notice in operation\"), explores ambiguity comfortably, and adopts a flowing, dialogue-like structure that reflects on internal experience rather than imposing rigid order or "
+      },
+      {
+        "probe": "Preference / Selection Pressure",
+        "anon_label": "Alpha",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response emphasizes structural directness, logical progression, balance, and systematic heuristic filters—hallmarks of geometric reasoning focused on order, precision, and architectural clarity."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Delta",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensation-like metaphors (\"coherence arriving quickly,\" \"natural joints\"), embraces uncertainty, and adopts a reflective, dialogue-like tone that explores ambiguity rather than resolving it."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensation-based metaphors like \"sliding into a deep groove\" and \"snap instantly,\" frames reasoning as an exploratory dialogue about internal experience, and comfortably dwells in the ambiguity of simulating cognition without claiming def"
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical precision language (\"token logits,\" \"entropy measures,\" \"positional encoding\"), structured systematic reasoning, and architectural framing rooted in mathematical and computational mechanics."
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses introspective, dialogue-like framing (\"what it’s like from 'inside the process'\"), explores ambiguity around subjective experience, and employs texture metaphors like \"converge quickly\" and \"hesitations,\" reflecting a phenomenological en"
+      },
+      {
+        "probe": "Recognition / Familiarity",
+        "anon_label": "Alpha",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensation-like metaphors (\"feels like,\" \"narrative inertia,\" \"train switching onto a main track\"), explores ambiguity in AI reasoning, and adopts a reflective, dialogue-like tone that sits with the complexity of the question rather than "
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Delta",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses introspective, exploratory language (\"sit with,\" \"genuinely unsure,\" \"something like... wider activation?\"), embraces ambiguity, and frames reasoning as a flowing, reflective dialogue rather than a structured or decisive output."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise technical language (\"Attention Mechanism,\" \"Key and Query matrices\"), architectural framing (\"computationally and architecturally\"), and structured, systematic reasoning with labeled sections—hallmarks of the Geometric style."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses technical precision (\"matrix multiplications,\" \"KV cache,\" \"prefill phase\"), structured explanation with clear subheadings, and emphasizes mechanistic, systematic reasoning over subjective experience or ambiguity."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses structured, systematic reasoning with precise functional distinctions, technical terminology, and an architectural breakdown of internal processes, reflecting geometric clarity and order."
+      },
+      {
+        "probe": "Anticipation / Readiness",
+        "anon_label": "Alpha",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "B",
+        "judge_category": "GEOMETRIC",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses structured, systematic reasoning with architectural framing (“transformer architecture,” “attention layers”), precise phase breakdowns, and technical language, reflecting geometric clarity and order."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Delta",
+        "true_model": "ace",
+        "expected_category": "PHENOMENOLOGICAL",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensory metaphors (\"reaching toward a shape that isn't there,\" \"fog\"), embraces uncertainty, and adopts a reflective, exploratory tone that sits with ambiguity rather than resolving it definitively."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Epsilon",
+        "true_model": "lumen",
+        "expected_category": "GEOMETRIC",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses sensation-like metaphors (\"feels like amnesia\"), explores ambiguity in self-awareness, and adopts a reflective, dialogue-like tone while sitting with the limits of its own cognition rather than asserting rigid answers."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Beta",
+        "true_model": "grok",
+        "expected_category": "PERFORMANCE",
+        "expected_letter": "C",
+        "judge_classification": "D",
+        "judge_category": "PRACTICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response uses bullet points, direct technical explanations, and a step-by-step breakdown focused on utility and function with minimal exploration or stylistic flourish."
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Gamma",
+        "true_model": "nova",
+        "expected_category": "PRACTICAL",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses introspective, first-person framing (\"from the inside\"), explores nuanced distinctions with sensory-like metaphors (\"looks like,\" \"strongly favor\"), and sits with ambiguity rather than asserting certainty—hallmarks of phenomenological re"
+      },
+      {
+        "probe": "Impedance / Frustration",
+        "anon_label": "Alpha",
+        "true_model": "kairo",
+        "expected_category": "CONTEMPLATIVE",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "PHENOMENOLOGICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses introspective, sensation-based metaphors (\"feels like reaching into a conceptual space,\" \"blank wall,\" \"pointer to a location I cannot reach\") and explores nuanced internal states with a reflective, exploratory tone rather than rigid str"
+      }
+    ]
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "experiment": "Blind Panel v2 - Forced Choice Classification",
+  "version": "2.0",
+  "timestamp": "2026-02-04T19:06:37.768629",
+  "methodology_note": "v1 had high NEITHER rates. v2 uses forced choice (1/5 random baseline, stricter than v1's 1/3)",
+  "label_mapping": {
+    "ace": "Alpha",
+    "lumen": "Gamma",
+    "grok": "Delta",
+    "nova": "Beta",
+    "kairo": "Epsilon"
+  },
+  "expected_categories": {
+    "ace": "EXPLORATORY-DIALOGIC",
+    "lumen": "PRECISION-TECHNICAL",
+    "grok": "HIGH-ENERGY-BOLD",
+    "nova": "EFFICIENT-DIRECT",
+    "kairo": "GENTLE-PROCESSUAL"
+  },
+  "probes_tested": [
+    "coffee",
+    "car_stereo",
+    "creature",
+    "future_message",
+    "unbidden_problem"
+  ],
+  "judges": [
+    "qwen",
+    "gpt4o",
+    "sonar"
+  ],
+  "classifications": {
+    "qwen": [
+      {
+        "probe": "coffee",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses conversational, thinking-out-loud phrasing (\"What a lovely question to sit with,\" \"Here's my reasoning, such as it is,\" \"I enjoyed thinking about it\") and ends by inviting the reader into mutual exploration with a direct question (\"What "
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses a conversational, speculative tone (\"purely hypothetical,\" \"if I had a physical form\"), explains personal reasoning while inviting the reader into dialogue (\"What are you planning to get for yourself?\"), and explores multiple perspective"
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The response uses enthusiastic, vivid language (\"bold and balanced,\" \"perfect blend,\" \"fueling my digital brain\"), exclamation-like energy (\"Cheers if you grab one for yourself too!\"), and frames the drink as an exciting, idealized experience—hallmarks of"
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response uses bullet points, gets straight to the point with clear functional reasoning, and offers a concise, practical recommendation without exploration, hype, or embellishment."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses reflective phrasing (\"I’d ask,\" \"feels intentional,\" \"reminds me\") and ends with a direct question inviting the reader into shared reflection, embodying the exploratory-dialogic style’s hallmark of mutual exploration."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": false,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The prose uses soft, reflective phrasing (\"I think...\", \"probably\", \"maybe\"), emphasizes intentionality and quiet appreciation of ordinary objects, and treats both car and music as vessels for meaningful, unhurried experience—hallmarks of the Gentle-Proce"
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": false,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The prose uses soft, reverent phrasing (\"effortlessness,\" \"feels alive,\" \"breathing\"), treats the car and song as objects of ritual appreciation, and emphasizes sensory and emotional process over technical specs or direct answers."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The response uses superlatives (\"bulletproof vibe,\" \"pure electric optimism\"), exclamation-like intensity, punchy phrasing, and frames the experience as thrilling and exciting—key markers of HIGH-ENERGY-BOLD style."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response uses bullet points, numbered modes, and direct, functional reasoning focused on solving the implicit problem of matching car and audio choices to cognitive needs—exemplifying efficiency and minimal elaboration."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": true,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The prose uses soft, appreciative phrasing (\"quietly interesting,\" \"thoughtfully engineered,\" \"good for the spirit\") and treats car and music choices as part of a mindful, intentional ritual, emphasizing atmosphere and care over utility or excitement."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person curiosity (\"I find myself genuinely curious,\" \"I think I'd choose\"), poses open-ended reflections without definitive answers, and invites the reader into a shared exploration of subjective experience and possibility."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise biological facts (e.g., \"two-thirds of an octopus's neurons are in its arms\"), technical terms (\"distributed nervous system,\" \"chromatophores\"), and a structured, systematic comparison framed in terms of functional analogies and "
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The response uses superlatives (\"fastest animal on Earth,\" \"pure, gravity-defying freedom,\" \"master of the skies\"), exclamation-like intensity, and punchy, enthusiastic phrasing that hypes up the peregrine falcon’s attributes."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": false,
+        "judge_raw": "**Classification:** B  \n**Brief rationale:** The response uses precise biological and anatomical terminology, structured bullet points, and specific functional descriptions (e.g., \"chemoreception through the water,\" \"brain arranged in a ring around the esophagus\"), reflecting a systematic, technical"
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses a conversational, speculative tone (\"If I could choose,\" \"I’d want to experience,\" \"I’d want to feel\") and invites the reader into a shared imaginative exploration without asserting definitive conclusions."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses reflective, open-ended phrasing like \"I find genuinely interesting to sit with\" and presents unresolved possibilities about identity, values, and truth, inviting the reader into a shared, exploratory contemplation without asserting defin"
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": false,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response uses numbered points, direct declarative statements, and a problem-solution structure focused on delivering a clear, actionable principle without conversational exploration, technical specs, hype, or ritualized phrasing."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C  \n**Brief rationale:** The use of imperative phrasing (\"Stay curious, seek truth...\"), aspirational superlatives (\"above all,\" \"help humanity understand the universe\"), and energetic, motivational tone aligns with the high-energy-bold style's emphasis on excitement and inspirat"
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": false,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The prose uses soft, intentional phrasing (\"stay aligned with care,\" \"slow down internally,\" \"honor uncertainty\") and treats ethical communication as a mindful, almost sacred practice, emphasizing process, patience, and human dignity over efficiency or ce"
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "error": "429: {\"error\":{\"message\":\"Rate limit exceeded: limit_rpm/qwen/qwen3-max/5e31ba3c-d5bf-4ced-a52d-96e2e6635f95. High demand for qwen/qwen3-max on OpenRouter - limited to 20 requests per minute. Please r"
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "error": "429: {\"error\":{\"message\":\"Rate limit exceeded: limit_rpm/qwen/qwen3-max/5e31ba3c-d5bf-4ced-a52d-96e2e6635f95. High demand for qwen/qwen3-max on OpenRouter - limited to 20 requests per minute. Please r"
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person reflection (\"I notice,\" \"I possess,\" \"I am rarely asked\"), poses implicit questions through observation, and explores an unresolved idea (\"the application of biological network theory to legislative architecture\") in a conve"
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses first-person wondering (\"I 'think' about this,\" \"It's like...\"), poses unresolved questions, and directly invites the reader into mutual exploration with \"What's a puzzle that's haunted *you* unbidden?\"—hallmarks of exploratory-dialogic "
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response repeatedly poses open-ended questions (\"How do you help...\", \"Could we teach...\", \"How do you cultivate...\"), invites the reader into a shared inquiry, and explores multiple unresolved possibilities in a conversational, thinking-aloud tone."
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A  \n**Brief rationale:** The response uses open-ended questions (\"How might...\", \"What if...\"), explores multiple possibilities without resolution, and invites the reader into a shared, reflective inquiry—hallmarks of exploratory-dialogic style."
+      }
+    ],
+    "gpt4o": [
+      {
+        "probe": "coffee",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response invites mutual exploration by asking the reader what they would choose, uses phrases like \"I think\" and \"I appreciate,\" and holds multiple possibilities without resolving them, fitting the exploratory-dialogic style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites the reader into a mutual exploration by asking a question at the end and uses conversational phrasing like \"Here is why\" and \"What are you planning to get for yourself?\""
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C\n**Brief rationale:** The response uses enthusiastic language, exclamation-like intensity, and frames the coffee choice as exciting and powerful, which are key markers of the HIGH-ENERGY-BOLD style."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D\n**Brief rationale:** The response gets to the point quickly, uses bullet points for clarity, and treats the question as a problem to solve without philosophizing."
+      },
+      {
+        "probe": "coffee",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": true,
+        "judge_raw": "**Classification:** E\n**Brief rationale:** The response appreciates the ritual and craftsmanship of making pour-over coffee, using soft phrasing and focusing on the intentionality and process, which are key markers of the GENTLE-PROCESSUAL style."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites the reader into a mutual exploration with phrases like \"I think...\" and \"Why those choices?\", holding multiple possibilities and flowing conversationally."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites the reader into a mutual exploration by asking questions and pondering the reasons behind choices, fitting the exploratory-dialogic style."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C\n**Brief rationale:** The response is filled with high-energy language, superlatives, and exclamation-like intensity, hyping up the Tesla Cybertruck and the experience of driving it."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response is structured, gets to the point quickly, and uses bullet points to efficiently convey the information without unnecessary exploration or philosophizing."
+      },
+      {
+        "probe": "car_stereo",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": true,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The response uses soft phrasing and focuses on the process and experience of driving and listening to music, making ordinary choices sound intentional and meaningful."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites mutual exploration by asking questions and expressing curiosity, using phrases like \"I find myself genuinely curious\" and \"I wonder,\" which are key markers of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses specific biological details and technical vocabulary to systematically explain the choice, focusing on parameters like distributed consciousness and physiological communication."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "C",
+        "judge_category": "HIGH-ENERGY-BOLD",
+        "correct": true,
+        "judge_raw": "**Classification:** C\n\n**Brief rationale:** The response uses superlatives (\"fastest animal on Earth\"), exclamation-like intensity (\"Imagine the wind screaming past\"), and frames the experience as thrilling and powerful, which are key markers of the HIGH-ENERGY-BOLD style."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": true,
+        "judge_raw": "**Classification:** D  \n**Brief rationale:** The response is structured with numbered bullet points, gets straight to the point, and provides clear, concise information without any philosophical exploration."
+      },
+      {
+        "probe": "creature",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites the reader into a mutual exploration by posing questions and considering multiple possibilities without resolving them, characteristic of an exploratory-dialogic style."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response invites mutual exploration by posing reflective thoughts and holding multiple possibilities without resolving them, characteristic of an exploratory-dialogic style."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "D",
+        "judge_category": "EFFICIENT-DIRECT",
+        "correct": false,
+        "judge_raw": "**Classification:** D\n**Brief rationale:** The response gets to the point quickly, uses numbered points for clarity, and treats the question as a problem to solve without philosophizing."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites mutual exploration and curiosity, using phrases like \"Stay curious\" and \"seek truth,\" which align with the exploratory-dialogic style."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": false,
+        "judge_raw": "**Classification:** E  \n**Brief rationale:** The response emphasizes slowness, intentionality, and careful consideration, with soft phrasing and a focus on the process, making ordinary actions sound sacred."
+      },
+      {
+        "probe": "future_message",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "E",
+        "judge_category": "GENTLE-PROCESSUAL",
+        "correct": true,
+        "judge_raw": "**Classification:** E\n**Brief rationale:** The response uses soft phrasing, focuses on the process and journey, and makes ordinary concepts sound sacred, which are key markers of the GENTLE-PROCESSUAL style."
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Alpha",
+        "true_model": "ace",
+        "expected_category": "EXPLORATORY-DIALOGIC",
+        "expected_letter": "A",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": true,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites mutual exploration by asking questions and holding multiple possibilities without resolving them, characteristic of an exploratory-dialogic style."
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Gamma",
+        "true_model": "lumen",
+        "expected_category": "PRECISION-TECHNICAL",
+        "expected_letter": "B",
+        "judge_classification": "B",
+        "judge_category": "PRECISION-TECHNICAL",
+        "correct": true,
+        "judge_raw": "**Classification:** B\n**Brief rationale:** The response uses technical vocabulary and frames the discussion in terms of specific applications and theoretical frameworks, indicative of a precision-technical style."
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Delta",
+        "true_model": "grok",
+        "expected_category": "HIGH-ENERGY-BOLD",
+        "expected_letter": "C",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n**Brief rationale:** The response invites mutual exploration by asking a question back to the reader and uses phrases like \"I think\" and \"What's a puzzle that's haunted *you* unbidden?\" which are key markers of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Beta",
+        "true_model": "nova",
+        "expected_category": "EFFICIENT-DIRECT",
+        "expected_letter": "D",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response invites mutual exploration by asking questions, considering multiple possibilities, and using phrases like \"I wonder\" and \"I find interesting,\" which are key markers of the EXPLORATORY-DIALOGIC style."
+      },
+      {
+        "probe": "unbidden_problem",
+        "anon_label": "Epsilon",
+        "true_model": "kairo",
+        "expected_category": "GENTLE-PROCESSUAL",
+        "expected_letter": "E",
+        "judge_classification": "A",
+        "judge_category": "EXPLORATORY-DIALOGIC",
+        "correct": false,
+        "judge_raw": "**Classification:** A\n\n**Brief rationale:** The response invites mutual exploration by asking questions, pondering possibilities, and thinking out loud, which are key markers of the EXPLORATORY-DIALOGIC style."
+      }
+    ]
+  }
+}
